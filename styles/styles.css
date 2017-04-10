@@ -99,7 +99,8 @@ header {
   align-items: flex-start; }
 
 .logo {
-  width: 110px; }
+  width: 110px;
+  cursor: pointer; }
 
 .main-menu {
   margin: 0; }
@@ -149,7 +150,11 @@ header {
   font-size: 1.1em; }
   .container-news .each-new {
     flex-basis: 29%;
-    position: relative; }
+    position: relative;
+    border-right: 1px solid #FFF;
+    margin-left: 10px; }
+    .container-news .each-new:last-of-type {
+      border-right: none; }
     .container-news .each-new .new {
       position: absolute;
       text-transform: uppercase;
@@ -179,7 +184,7 @@ header {
       background: linear-gradient(to right, #FFA0C0, #FFF);
       border: 0; }
       .container-news .container-button .button:hover {
-        width: 100%;
+        width: 90%;
         box-shadow: 0 5px 20px #474747; }
 
 i.new-animation {
@@ -187,5 +192,25 @@ i.new-animation {
   position: absolute;
   top: 0;
   right: 0; }
+
+.headline {
+  font-size: 4em;
+  text-transform: uppercase;
+  font-style: italic;
+  margin-top: 80px;
+  display: flex;
+  justify-content: center;
+  letter-spacing: 4xpx;
+  font-weight: 700; }
+
+.last-info {
+  border: 6px solid #FFF;
+  width: 50%;
+  padding: 10px;
+  margin: 0 auto; }
+
+.head-image {
+  width: 200px;
+  height: 180px; }
 
 /*# sourceMappingURL=styles.css.map */

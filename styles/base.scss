@@ -27,6 +27,7 @@ header {
 }
 .logo {
 	width: 110px;
+	cursor: pointer;
 }
 .main-menu {
 	margin: 0;
@@ -79,6 +80,11 @@ header {
 	.each-new {
 		flex-basis: 29%;
 		position: relative;
+		border-right: 1px solid $white;
+		margin-left: 10px;
+		&:last-of-type {
+		border-right: none;
+		}
 		.new {
 			position: absolute;
 			text-transform: uppercase;
@@ -112,7 +118,7 @@ header {
 			background: linear-gradient(to right, $pink, $white);
 			border: 0;
 			&:hover {
-				width: 100%;
+				width: 90%;
 				box-shadow: 0 5px 20px $gray-medium;
 			}
 		}
@@ -124,4 +130,24 @@ i.new-animation {
 	position: absolute;
 	top: 0;
 	right: 0;
+}
+.headline {
+	font-size: 4em;
+	text-transform: uppercase;
+	font-style: italic;
+	margin-top: 80px;
+	display: flex;
+	justify-content: center;
+	letter-spacing: 4xpx;
+	font-weight: 700;
+}
+.last-info {
+	border: 6px solid $white;
+	width: 50%;
+	padding: 10px;
+	margin: 0 auto;
+}
+.head-image {
+	width: 200px;
+	height: 180px;
 }
