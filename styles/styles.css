@@ -173,7 +173,8 @@ header {
 .main-features {
   position: relative;
   background-color: #FFA0C0;
-  color: #FFF; }
+  color: #FFF;
+  padding-bottom: 30px; }
 
 .container-news {
   display: flex;
@@ -363,15 +364,17 @@ p.topic {
   margin: 50px auto;
   padding: 0; }
   .container-disc .container-music {
-    padding: 15px 0; }
+    padding: 20px 0;
+    line-height: 26px; }
   .container-disc .disc-info {
     display: inline-block;
     margin: 5px 0;
     padding: 0;
     background-color: #FFF;
-    margin: 1px solid #000; }
+    margin: 1px solid #000;
+    transition: all .4s; }
     .container-disc .disc-info img {
-      width: 250px;
+      width: 230px;
       margin: 0 auto;
       display: -webkit-flex;
       display: -webkit-box;
@@ -383,23 +386,80 @@ p.topic {
       color: #000;
       display: flex;
       justify-content: center;
-      font-family: 'Oswald';
-      text-align: center; }
+      text-align: center;
+      font-weight: 400;
+      font-size: 1.1em; }
     .container-disc .disc-info .name-artist {
       color: #202020;
-      font-family: 'Oswald';
       font-weight: 400;
       display: flex;
-      justify-content: center; }
+      justify-content: center;
+      font-size: .9em; }
     .container-disc .disc-info .date-disc {
-      color: #474747;
+      color: #A5A5A5;
       font-family: 'Oswald';
       text-transform: uppercase;
       display: flex;
       justify-content: center; }
+    .container-disc .disc-info:hover {
+      transform: scale(1.2); }
 
 .button.disc {
-  width: 20%;
+  width: 15%;
   margin-bottom: 30px; }
+  .button.disc:hover {
+    width: 18%; }
+
+.members {
+  padding: 50px; }
+  .members p {
+    text-align: center;
+    color: #FFF;
+    font-size: 3em;
+    font-style: italic;
+    font-weight: 400;
+    letter-spacing: 2px; }
+
+footer {
+  background-color: #000;
+  padding: 30px; }
+
+.button-redsocial {
+  width: 20%;
+  border: 0;
+  padding: 10px;
+  display: inline-block;
+  text-transform: uppercase;
+  color: #FFF;
+  font-family: 'Oswald';
+  letter-spacing: 1px;
+  cursor: pointer; }
+
+.button-redsocial.twitter {
+  background-color: #26A1EC; }
+
+.button-redsocial.facebook {
+  background-color: #425998; }
+
+.button-company {
+  width: 10%;
+  display: block;
+  padding: 10px;
+  border-radius: 15px;
+  background: linear-gradient(to right, #E4C674, #BF9D44);
+  border: none;
+  cursor: pointer;
+  letter-spacing: 2px;
+  font-weight: 400;
+  color: #FFF; }
+
+.container-button-redsocial {
+  margin: 0 auto; }
+
+i.fa-twitter {
+  margin-right: 10px; }
+
+i.fa-facebook {
+  margin-right: 10px; }
 
 /*# sourceMappingURL=styles.css.map */
