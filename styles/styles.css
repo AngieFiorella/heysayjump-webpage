@@ -145,19 +145,16 @@ header {
 
 .container-news {
   display: flex;
-  padding: 10px; }
+  padding: 10px;
+  font-size: 1.1em; }
   .container-news .each-new {
     flex-basis: 29%;
     position: relative; }
-    .container-news .each-new:last-of-type {
-      flex-basis: 13%; }
     .container-news .each-new .new {
       position: absolute;
-      top: 0;
-      right: 0;
       text-transform: uppercase;
-      top: 12px;
-      right: 17px;
+      top: 13px;
+      right: 19px;
       font-family: 'Oswald';
       font-weight: 400; }
     .container-news .each-new .date {
@@ -166,7 +163,24 @@ header {
   .container-news .feature {
     display: block;
     text-transform: uppercase;
-    margin-top: 10px; }
+    margin-top: 5px; }
+  .container-news .container-button {
+    flex-basis: 13%; }
+    .container-news .container-button .button {
+      text-transform: uppercase;
+      width: 80%;
+      font-family: 'Oswald';
+      border-radius: 25px;
+      padding: 10px;
+      transition: all .3s;
+      box-shadow: 0 15px 60px #474747;
+      display: flex;
+      justify-content: center;
+      background: linear-gradient(to right, #FFA0C0, #FFF);
+      border: 0; }
+      .container-news .container-button .button:hover {
+        width: 100%;
+        box-shadow: 0 5px 20px #474747; }
 
 i.new-animation {
   color: #000;

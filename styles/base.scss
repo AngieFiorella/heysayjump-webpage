@@ -75,19 +75,15 @@ header {
 .container-news {
 	display: flex;
 	padding: 10px;
+	font-size: 1.1em;
 	.each-new {
 		flex-basis: 29%;
 		position: relative;
-		&:last-of-type {
-			flex-basis: 13%;
-		}
 		.new {
 			position: absolute;
-			top: 0;
-			right: 0;
 			text-transform: uppercase;
-			top: 12px;
-			right: 17px;
+			top: 13px;
+			right: 19px;
 			font-family: 'Oswald';
 			font-weight: 400;
 		}
@@ -99,8 +95,29 @@ header {
 	.feature {
 		display: block;
 		text-transform: uppercase;
-		margin-top: 10px;
+		margin-top: 5px;
 	}
+	.container-button {
+		flex-basis: 13%;
+		.button {
+			text-transform: uppercase;
+			width: 80%;
+			font-family: 'Oswald';
+			border-radius: 25px;
+			padding: 10px;
+			transition: all .3s;
+			box-shadow: 0 15px 60px $gray-medium;
+			display: flex;
+			justify-content: center;
+			background: linear-gradient(to right, $pink, $white);
+			border: 0;
+			&:hover {
+				width: 100%;
+				box-shadow: 0 5px 20px $gray-medium;
+			}
+		}
+	}
+	
 }
 i.new-animation {
 	color: $black;
