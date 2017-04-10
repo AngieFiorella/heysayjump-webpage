@@ -1,8 +1,14 @@
 body {
 	font-family: 'Noto Sans';
 	position: relative;
-	font-size: 18px;
+	font-size: 16px;
 }
+
+.container {
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
 .background-image-fixed {
 	position: fixed;
 	z-index: -999;
@@ -12,53 +18,63 @@ body {
 	width: 100%
 }
 .background-image {
-	width: 76%;
+	width: 84%;
 	position: absolute;
-	top: 0;	
+	top: 0;
 	z-index: -997;
-	left: 12%;
-	right: 12%;
+	left: 8%;
+	right: 8%;
 }
+
 header {
-	padding: 30px 20px;
-	display: flex;
-	justify-content: space-between;
-	align-items: flex-start;
+	padding: 30px 0;
+	@include display-flex;
+	@include justify-content(space-between);
+	@include align-items(flex-start);
 }
+
 .logo {
-	width: 110px;
+	width: 130px;
 	cursor: pointer;
 }
+
 .main-menu {
 	margin: 0;
-}
-.main-menu ul li {
-	display: inline;
-	margin-right: 10px;
-	color: $white;
-}
-.main-menu ul li a {
-	text-transform: uppercase;
-	font-weight: 700;
-	font-size: 1.3em;
-	transition: all .3s;
-	&:hover {
-	font-size: 1.6em;
-
+	li {
+		color: $white;
+		display: inline-block;
+		margin-right: 15px;
+		transition: 1s transform ease;
+		&:last-of-type { margin-right: 0; }
 	}
+
+	li a {
+		text-transform: uppercase;
+		font-weight: 600;
+		font-size: 1.3em;
+		transition: all .3s;
+	}
+	li:hover { transform: rotateY(-360deg); }
 }
+
+.cover {
+	min-height: 400px;
+	height: 63vh;
+	@include display-flex;
+	@include align-items(flex-end);
+}
+
 .group-band {
-	padding: 30px;
 	margin: 0;
+	margin-bottom: 50px;
 }
+
 .group-band span:first-of-type {
 	font-style: italic;
 	font-size: 4.3em;
 	color: $white;
-	position: relative;
 	font-weight: 700;
 	display: block;
-	margin-top: 200px;
 	margin-bottom: 20px;
 }
 .group-band span:last-of-type {
@@ -68,30 +84,45 @@ header {
 	font-weight: 400;
 	letter-spacing: 1px;
 }
+
 .main-features {
 	position: relative;
 	background-color: $pink;
 	color: $white;
 }
+
 .container-news {
 	display: flex;
-	padding: 10px;
 	font-size: 1.1em;
+	padding: 10px 20px;
 	.each-new {
-		flex-basis: 29%;
+		flex-basis: 28%;
 		position: relative;
 		border-right: 1px solid $white;
 		margin-left: 10px;
-		&:last-of-type {
-		border-right: none;
+		&:last-of-type { border-right: none; }
+		.icon-wrapper {
+			display: inline-block;
+			position: absolute;
+			top: 0;
+			right: 0;
+		}
+		.new-description {
+			padding-top: 20px;
 		}
 		.new {
 			position: absolute;
 			text-transform: uppercase;
-			top: 13px;
-			right: 19px;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
 			font-family: 'Oswald';
 			font-weight: 400;
+			font-size: .8em;
+		}
+		i.fa-spin {
+			animation: fa-spin 4s infinite linear;
+			font-size: 2.5em;
 		}
 		.date {
 			font-family: 'Oswald';
@@ -102,52 +133,137 @@ header {
 		display: block;
 		text-transform: uppercase;
 		margin-top: 5px;
+		font-weight: 500;
+		font-size: .9em;
 	}
 	.container-button {
-		flex-basis: 13%;
-		.button {
+		@include flex-basis(16%);
+		@include align-self(flex-end);
+		margin-left: 20px;
+	}
+}
+
+@include keyframes(fa-spin) {
+	0% { transform: scale(1) rotate(0deg); }
+	50% { transform: scale(1.2) rotate(180deg); }
+	100% { transform: scale(1) rotate(360deg); }
+}
+
+.button {
 			text-transform: uppercase;
 			width: 80%;
 			font-family: 'Oswald';
 			border-radius: 25px;
 			padding: 10px;
 			transition: all .3s;
-			box-shadow: 0 15px 60px $gray-medium;
+			box-shadow: 10px 17px 20px rgba($black, .25);
 			display: flex;
 			justify-content: center;
-			background: linear-gradient(to right, $pink, $white);
+			background: linear-gradient(to right, lighten($pink, 8%), $pink,  darken($pink, 2%));
 			border: 0;
+			cursor: pointer;
 			&:hover {
 				width: 90%;
-				box-shadow: 0 5px 20px $gray-medium;
+				box-shadow: 2px 8px 4px -6px rgba($black, .4);
 			}
 		}
-	}
-	
+i.arrow {
+	margin: 0;
+	vertical-align: bottom;
+	margin-left: 5px;
+	line-height: 26px;
 }
-i.new-animation {
-	color: $black;
-	position: absolute;
-	top: 0;
-	right: 0;
-}
+i.new-animation { color: $black; }
 .headline {
-	font-size: 4em;
+	font-size: 5em;
 	text-transform: uppercase;
 	font-style: italic;
 	margin-top: 80px;
 	display: flex;
 	justify-content: center;
-	letter-spacing: 4xpx;
+	letter-spacing: 4px;
 	font-weight: 700;
 }
 .last-info {
-	border: 6px solid $white;
-	width: 50%;
-	padding: 10px;
-	margin: 0 auto;
+	border: 8px solid $white;
+	width: 70%;
+	padding: 200px 50px 50px 50px;
+	margin: 150px auto 100px auto;
+	position: relative;
+	.date {
+		font-family: 'Oswald';
+		text-transform: uppercase;
+		display: flex;
+		justify-content: center;
+		font-weight: 400;
+		letter-spacing: 3px;
+	}
+	h2 {
+		display: flex;
+		justify-content: center;
+		font-size: 2.5em;
+		font-weight: 400;
+		margin-top: 25px;
+	}
+	h3 {
+		display: flex;
+		justify-content: center;
+		font-size: 1.5em;
+		font-weight: 400;
+		margin-top: 10px;
+	}
+	.price {
+		display: flex;
+		justify-content: center;
+		font-weight: 300;
+		margin-top: 25px;
+		&:last-of-type { margin-top: 6px;}
+	}
+	.button {
+		margin-top: 30px;
+		width: 20%;
+		&:hover { width: 25%; }
+	}
 }
-.head-image {
-	width: 200px;
-	height: 180px;
+img.head-image {
+	width: 320px;
+	height: 250px;
+	position: absolute;
+}
+img.head-image.left {
+	top: -100px;
+	left: 90px;
+}
+img.head-image.right {
+	top: -100px;
+	right: 90px;
+}
+p.topic {
+		text-transform: uppercase;
+		font-size: 3em;
+		display: flex;
+		justify-content: center;
+		font-style: italic;
+		font-weight: 700;
+		letter-spacing: 3px;
+	}
+.container-disc {
+	width: 80%;
+	margin: 50px auto;
+	padding: 0;
+	.disc-info {
+		width: 23%;
+		display: inline-block;
+		margin: 5px;
+		padding: 5px;
+		background-color: $white;
+		margin: 1px solid $black;
+		img {
+			width: 200px;
+		}
+	}
+}
+.button.disc {
+	width: 20%;
+	margin-bottom: 30px;
 }

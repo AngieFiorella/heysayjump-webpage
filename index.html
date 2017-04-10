@@ -8,8 +8,7 @@
 	<link rel="stylesheet" type="text/css" href="styles/styles.css">
 </head>
 <body>
-<div class="container">
-	<header>
+	<header class="container">
 		<img class="logo" src="images/logo.jpg">
 		<nav class="main-menu">
 			<ul>
@@ -21,7 +20,7 @@
 			</ul>
 		</nav>
 	</header>
-	<section class="band">
+	<section class="cover container">
 		<article class="group-band">
 			<span>Hey! Say! JUMP</span>
 			<span>ryosuke yamada / yuri chinen / yuto nakajima <br/>/ keito okamoto / daiki arioka / yuya takaki / kei inoo <br/>/ hikaru yaotome / kota yabu</span>
@@ -31,26 +30,41 @@
 	</section>
 	<section class="main-features">
 		<div class="container-news">
-			<div class="each-new">
-				<span class="date">2017.04.07</span>
-				<span class="feature">[tv / radio / magazine]</span>
-				<i class="fa fa-certificate fa-spin fa-3x fa-fw new-animation"></i>
-				<span class="new">new</span>
-			</div>
-			<div class="each-new">
-				<span class="date">2017.11.23</span>
-				<span class="feature">[radio / magazine]</span>
-				<i class="fa fa-certificate fa-spin fa-3x fa-fw new-animation"></i>
-				<span class="new">new</span>
-			</div>
-			<div class="each-new">
-				<span class="date">2017.07.19</span>
-				<span class="feature">[magazine]</span>
-				<i class="fa fa-certificate fa-spin fa-3x fa-fw new-animation"></i>
-				<span class="new">new</span>
-			</div>
+			<a class="each-new">
+				<div class="new-description">
+					<span class="date">2017.04.07</span>
+					<span class="feature">メディア情報[tv / radio / magazine]</span>
+				</div>
+				<div class="icon-wrapper">
+					<i class="fa fa-certificate fa-spin fa-3x fa-fw new-animation"></i>
+					<span class="new">new</span>
+				</div>
+			</a>
+			<a class="each-new">
+				<div class="new-description">
+					<span class="date">2017.11.23</span>
+					<span class="feature">メディア情報[tv / radio / magazine]</span>
+				</div>
+				<div class="icon-wrapper">
+					<i class="fa fa-certificate fa-spin fa-3x fa-fw new-animation"></i>
+					<span class="new">new</span>
+				</div>
+			</a>
+			<a class="each-new">
+				<div class="new-description">
+					<span class="date">2017.07.19</span>
+					<span class="feature">メディア情報[magazine]</span>
+				</div>
+				<div class="icon-wrapper">
+					<i class="fa fa-certificate fa-spin fa-3x fa-fw new-animation"></i>
+					<span class="new">new</span>
+				</div>
+			</a>
 			<div class="container-button">
-				<button class="button">view more</button>
+				<button class="button">
+					view more
+					<i class="fa fa-long-arrow-right arrow" aria-hidden="true"></i>
+				</button>
 			</div>
 		</div>
 		<span class="headline">new release</span>
@@ -60,11 +74,14 @@
 			<h3>Hey! Say! JUMP</h3>
 			<p class="price">$35 - 2DVD</p>
 			<p class="price">$47 - 1CD</p>
-			<button class="button">view more</button>
-			<img class="head-image" src="images/livetour1.jpg">
-			<img class="head-image" src="images/livetour2.jpg">
+			<button class="button">
+				view more
+				<i class="fa fa-long-arrow-right arrow" aria-hidden="true"></i>
+			</button>
+			<img class="head-image left" src="images/livetour1.jpg">
+			<img class="head-image right" src="images/livetour2.jpg">
 		</div>
-		<p>discography</p>
+		<p class="topic">discography</p>
 		<div class="container-disc">
 			<article class="disc-info">
 				<img src="images/givemelove.jpg">
@@ -115,7 +132,10 @@
 				<span>single - 2015.04.29</span>
 			</article>
 		</div>
-		<button class="button">view more</button>
+		<button class="button disc">
+			view more
+			<i class="fa fa-long-arrow-right arrow" aria-hidden="true"></i>
+		</button>
 	</section>
 	<section class="members">
 		<p>MEMBER PROFILE</p>
@@ -127,6 +147,5 @@
 		<a href="#"></a>
 		<p>Derechos reservados</p>
 	</footer>
-</div>
 </body>
 </html>
