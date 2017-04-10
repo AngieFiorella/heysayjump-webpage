@@ -1,0 +1,110 @@
+body {
+	font-family: 'Noto Sans';
+	position: relative;
+	font-size: 18px;
+}
+.background-image-fixed {
+	position: fixed;
+	z-index: -999;
+	top: 0;
+	left: 0;
+	right: 0;
+	width: 100%
+}
+.background-image {
+	width: 76%;
+	position: absolute;
+	top: 0;	
+	z-index: -997;
+	left: 12%;
+	right: 12%;
+}
+header {
+	padding: 30px 20px;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+}
+.logo {
+	width: 110px;
+}
+.main-menu {
+	margin: 0;
+}
+.main-menu ul li {
+	display: inline;
+	margin-right: 10px;
+	color: $white;
+}
+.main-menu ul li a {
+	text-transform: uppercase;
+	font-weight: 700;
+	font-size: 1.3em;
+	transition: all .3s;
+	&:hover {
+	font-size: 1.6em;
+
+	}
+}
+.group-band {
+	padding: 30px;
+	margin: 0;
+}
+.group-band span:first-of-type {
+	font-style: italic;
+	font-size: 4.3em;
+	color: $white;
+	position: relative;
+	font-weight: 700;
+	display: block;
+	margin-top: 200px;
+	margin-bottom: 20px;
+}
+.group-band span:last-of-type {
+	font-family: 'Oswald';
+	color: $white;
+	text-transform: uppercase;
+	font-weight: 400;
+	letter-spacing: 1px;
+}
+.main-features {
+	position: relative;
+	background-color: $pink;
+	color: $white;
+}
+.container-news {
+	display: flex;
+	padding: 10px;
+	.each-new {
+		flex-basis: 29%;
+		position: relative;
+		&:last-of-type {
+			flex-basis: 13%;
+		}
+		.new {
+			position: absolute;
+			top: 0;
+			right: 0;
+			text-transform: uppercase;
+			top: 12px;
+			right: 17px;
+			font-family: 'Oswald';
+			font-weight: 400;
+		}
+		.date {
+			font-family: 'Oswald';
+			font-weight: 400;
+		}
+	}
+	.feature {
+		display: block;
+		text-transform: uppercase;
+		margin-top: 10px;
+	}
+}
+i.new-animation {
+	color: $black;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
