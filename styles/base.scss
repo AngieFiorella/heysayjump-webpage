@@ -87,9 +87,25 @@ header {
 
 .main-features {
 	position: relative;
-	background-color: $pink;
 	color: $white;
 	padding-bottom: 30px;
+}
+
+.colorfull-bg {
+	animation: background-color 100s infinite linear;
+}
+
+@include keyframes(background-color) {
+  0%, 11% { background-color: $bg-red; }
+  12%, 22% { background-color: $bg-pink; }
+  23%, 33% { background-color: $bg-sky-blue; }
+  34%, 44% { background-color: $bg-green; }
+  45%, 55% { background-color: $bg-orange; }
+  56%, 66% { background-color: $bg-purple; }
+  67%, 77% { background-color: $bg-blue-purple; }
+  78%, 88% { background-color: $bg-yellow; }
+  89%, 99% { background-color: $bg-green-lemon; }
+  100% { background-color: $bg-red; }
 }
 
 .container-news {
@@ -141,6 +157,7 @@ header {
 		@include flex-basis(16%);
 		@include align-self(flex-end);
 		margin-left: 20px;
+		text-align: center;
 	}
 }
 
@@ -151,23 +168,22 @@ header {
 }
 
 .button {
-			text-transform: uppercase;
-			width: 80%;
-			font-family: 'Oswald';
-			border-radius: 25px;
-			padding: 10px;
-			transition: all .3s;
-			box-shadow: 10px 17px 20px rgba($black, .25);
-			@include display-flex;
-			@include justify-content(center);
-			background: linear-gradient(to right, lighten($pink, 8%), $pink,  darken($pink, 2%));
-			border: 0;
-			cursor: pointer;
-			&:hover {
-				width: 90%;
-				box-shadow: 2px 8px 4px -6px rgba($black, .4);
-			}
-		}
+	text-transform: uppercase;
+	width: 80%;
+	font-family: 'Oswald';
+	border-radius: 25px;
+	padding: 10px;
+	transition: all .3s;
+	box-shadow: 10px 17px 20px rgba($black, .25);
+	background: linear-gradient(to right, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.15), rgba(0, 0, 0, 0.05));
+	border: 0;
+	cursor: pointer;
+	&:hover {
+		width: 90%;
+		box-shadow: 2px 8px 4px -6px rgba($black, .4);
+	}
+}
+
 i.arrow {
 	margin: 0;
 	vertical-align: bottom;
@@ -179,7 +195,7 @@ i.new-animation { color: $black; }
 	font-size: 5em;
 	text-transform: uppercase;
 	font-style: italic;
-	margin-top: 80px;
+	padding-top: 80px;
 	@include display-flex;
 	@include justify-content(center);
 	letter-spacing: 4px;
@@ -259,22 +275,19 @@ p.topic {
 		letter-spacing: 3px;
 	}
 .container-disc {
-	width: 82%;
+	max-width: 900px;
 	margin: 50px auto;
-	padding: 0;
 	.container-music {
 		padding: 20px 0;
 		line-height: 26px;
 	}
 	.disc-info {
-		display: inline-block;
-		margin: 5px 0;
-		padding: 0;
 		background-color: $white;
-		margin: 1px solid $black;
 		transition: all .4s;
+		width: 23.5%;
+		margin-right: 2%;
 		img {
-			width: 230px;
+			width: 100%;
 			margin: 0 auto;
 			@include display-flex;
 		}
@@ -376,13 +389,3 @@ i.fa-twitter {
 i.fa-facebook {
 	margin-right: 10px;
 }
-/*
-.grid:after {
-  content: '';
-  display: block;
-  clear: both;
-}
-.grid-item {
-  float: left;
-  border-radius: 5px;
-}*/

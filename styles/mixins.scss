@@ -129,3 +129,12 @@
     @content;
   }
 }
+
+@mixin button-linear-gradient($color) {
+  background: $color;
+  background: -webkit-linear-gradient(to right, lighten($color, 8%), $color,  darken($color, 5%));
+  background: -o-linear-gradient(to right, lighten($color, 8%), $color,  darken($color, 5%));
+  background: -moz-linear-gradient(to right, lighten($color, 8%), $color,  darken($color, 5%));
+  background: linear-gradient(to right, lighten($color, 8%), $color,  darken($color, 5%));
+
+}

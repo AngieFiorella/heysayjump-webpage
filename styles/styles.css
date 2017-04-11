@@ -172,10 +172,96 @@ header {
 
 .main-features {
   position: relative;
-  background-color: #FFA0C0;
   color: #FFF;
   padding-bottom: 30px; }
 
+.colorfull-bg {
+  animation: background-color 100s infinite linear; }
+
+@-webkit-keyframes background-color {
+  0%, 11% {
+    background-color: #E14343; }
+  12%, 22% {
+    background-color: #FFA0C0; }
+  23%, 33% {
+    background-color: #34CBE8; }
+  34%, 44% {
+    background-color: #16A163; }
+  45%, 55% {
+    background-color: #F28728; }
+  56%, 66% {
+    background-color: #D17BF7; }
+  67%, 77% {
+    background-color: #5F69FF; }
+  78%, 88% {
+    background-color: #F2C914; }
+  89%, 99% {
+    background-color: #99D50F; }
+  100% {
+    background-color: #E14343; } }
+@-moz-keyframes background-color {
+  0%, 11% {
+    background-color: #E14343; }
+  12%, 22% {
+    background-color: #FFA0C0; }
+  23%, 33% {
+    background-color: #34CBE8; }
+  34%, 44% {
+    background-color: #16A163; }
+  45%, 55% {
+    background-color: #F28728; }
+  56%, 66% {
+    background-color: #D17BF7; }
+  67%, 77% {
+    background-color: #5F69FF; }
+  78%, 88% {
+    background-color: #F2C914; }
+  89%, 99% {
+    background-color: #99D50F; }
+  100% {
+    background-color: #E14343; } }
+@-ms-keyframes background-color {
+  0%, 11% {
+    background-color: #E14343; }
+  12%, 22% {
+    background-color: #FFA0C0; }
+  23%, 33% {
+    background-color: #34CBE8; }
+  34%, 44% {
+    background-color: #16A163; }
+  45%, 55% {
+    background-color: #F28728; }
+  56%, 66% {
+    background-color: #D17BF7; }
+  67%, 77% {
+    background-color: #5F69FF; }
+  78%, 88% {
+    background-color: #F2C914; }
+  89%, 99% {
+    background-color: #99D50F; }
+  100% {
+    background-color: #E14343; } }
+@keyframes background-color {
+  0%, 11% {
+    background-color: #E14343; }
+  12%, 22% {
+    background-color: #FFA0C0; }
+  23%, 33% {
+    background-color: #34CBE8; }
+  34%, 44% {
+    background-color: #16A163; }
+  45%, 55% {
+    background-color: #F28728; }
+  56%, 66% {
+    background-color: #D17BF7; }
+  67%, 77% {
+    background-color: #5F69FF; }
+  78%, 88% {
+    background-color: #F2C914; }
+  89%, 99% {
+    background-color: #99D50F; }
+  100% {
+    background-color: #E14343; } }
 .container-news {
   display: flex;
   font-size: 1.1em;
@@ -224,7 +310,8 @@ header {
     -moz-align-self: flex-end;
     -ms-flex-item-align: end;
     align-self: flex-end;
-    margin-left: 20px; }
+    margin-left: 20px;
+    text-align: center; }
 
 @-webkit-keyframes fa-spin {
   0% {
@@ -262,18 +349,7 @@ header {
   padding: 10px;
   transition: all .3s;
   box-shadow: 10px 17px 20px rgba(0, 0, 0, 0.25);
-  display: -webkit-flex;
-  display: -webkit-box;
-  display: -moz-flex;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  -moz-justify-content: center;
-  justify-content: center;
-  background: linear-gradient(to right, #ffc9db, #FFA0C0, #ff96b9);
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.15), rgba(0, 0, 0, 0.05));
   border: 0;
   cursor: pointer; }
   .button:hover {
@@ -293,7 +369,7 @@ i.new-animation {
   font-size: 5em;
   text-transform: uppercase;
   font-style: italic;
-  margin-top: 80px;
+  padding-top: 80px;
   display: -webkit-flex;
   display: -webkit-box;
   display: -moz-flex;
@@ -423,21 +499,18 @@ p.topic {
   letter-spacing: 3px; }
 
 .container-disc {
-  width: 82%;
-  margin: 50px auto;
-  padding: 0; }
+  max-width: 900px;
+  margin: 50px auto; }
   .container-disc .container-music {
     padding: 20px 0;
     line-height: 26px; }
   .container-disc .disc-info {
-    display: inline-block;
-    margin: 5px 0;
-    padding: 0;
     background-color: #FFF;
-    margin: 1px solid #000;
-    transition: all .4s; }
+    transition: all .4s;
+    width: 23.5%;
+    margin-right: 2%; }
     .container-disc .disc-info img {
-      width: 230px;
+      width: 100%;
       margin: 0 auto;
       display: -webkit-flex;
       display: -webkit-box;
@@ -562,16 +635,5 @@ i.fa-twitter {
 
 i.fa-facebook {
   margin-right: 10px; }
-
-/*
-.grid:after {
-  content: '';
-  display: block;
-  clear: both;
-}
-.grid-item {
-  float: left;
-  border-radius: 5px;
-}*/
 
 /*# sourceMappingURL=styles.css.map */
