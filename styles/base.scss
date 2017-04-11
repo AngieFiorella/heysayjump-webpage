@@ -158,8 +158,8 @@ header {
 			padding: 10px;
 			transition: all .3s;
 			box-shadow: 10px 17px 20px rgba($black, .25);
-			display: flex;
-			justify-content: center;
+			@include display-flex;
+			@include justify-content(center);
 			background: linear-gradient(to right, lighten($pink, 8%), $pink,  darken($pink, 2%));
 			border: 0;
 			cursor: pointer;
@@ -180,8 +180,8 @@ i.new-animation { color: $black; }
 	text-transform: uppercase;
 	font-style: italic;
 	margin-top: 80px;
-	display: flex;
-	justify-content: center;
+	@include display-flex;
+	@include justify-content(center);
 	letter-spacing: 4px;
 	font-weight: 700;
 }
@@ -194,28 +194,28 @@ i.new-animation { color: $black; }
 	.date {
 		font-family: 'Oswald';
 		text-transform: uppercase;
-		display: flex;
-		justify-content: center;
+		@include display-flex;
+		@include justify-content(center);
 		font-weight: 400;
 		letter-spacing: 3px;
 	}
 	h2 {
-		display: flex;
-		justify-content: center;
+		@include display-flex;
+		@include justify-content(center);
 		font-size: 2.5em;
 		font-weight: 400;
 		margin-top: 25px;
 	}
 	h3 {
-		display: flex;
-		justify-content: center;
+		@include display-flex;
+		@include justify-content(center);
 		font-size: 1.5em;
 		font-weight: 400;
 		margin-top: 10px;
 	}
 	.price {
-		display: flex;
-		justify-content: center;
+		@include display-flex;
+		@include justify-content(center);
 		font-weight: 300;
 		margin-top: 25px;
 		font-size: .7em;
@@ -252,8 +252,8 @@ img.head-image.right {
 p.topic {
 		text-transform: uppercase;
 		font-size: 3em;
-		display: flex;
-		justify-content: center;
+		@include display-flex;
+		@include justify-content(center);
 		font-style: italic;
 		font-weight: 700;
 		letter-spacing: 3px;
@@ -280,8 +280,8 @@ p.topic {
 		}
 		.title-disc {
 			color: $black;
-			display: flex;
-			justify-content: center;
+			@include display-flex;
+			@include justify-content(center);
 			text-align: center;
 			font-weight: 400;
 			font-size: 1.1em;
@@ -289,16 +289,16 @@ p.topic {
 		.name-artist {
 			color: $gray-dark;
 			font-weight: 400;
-			display: flex;
-			justify-content: center;
+			@include display-flex;
+			@include justify-content(center);
 			font-size: .9em;
 		}
 		.date-disc {
 			color: $gray-light;
 			font-family: 'Oswald';
 			text-transform: uppercase;
-			display: flex;
-			justify-content: center;
+			@include display-flex;
+			@include justify-content(center);
 		}
 		&:hover {
 			transform: scale(1.2);
@@ -332,7 +332,7 @@ footer {
 	margin: 0 auto;
 }
 .button-redsocial {
-	width: 40%;
+	width: 50%;
 	border: 0;
 	padding: 10px;
 	display: inline-block;
@@ -345,9 +345,13 @@ footer {
 }
 .button-redsocial.twitter {
 		background-color: $cyan;
+		border-top-left-radius: 2px;
+		border-bottom-left-radius: 2px;
 	}
 .button-redsocial.facebook {
 	background-color: $blue;
+	border-top-right-radius: 2px;
+	border-bottom-right-radius: 2px;
 }
 .button-company {
 	width: 40%;
@@ -364,6 +368,7 @@ footer {
 }
 .container-button-redsocial {
 	margin: 0 auto;
+	width: 76%;
 }
 i.fa-twitter {
 	margin-right: 10px;
@@ -371,3 +376,13 @@ i.fa-twitter {
 i.fa-facebook {
 	margin-right: 10px;
 }
+/*
+.grid:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.grid-item {
+  float: left;
+  border-radius: 5px;
+}*/

@@ -262,7 +262,16 @@ header {
   padding: 10px;
   transition: all .3s;
   box-shadow: 10px 17px 20px rgba(0, 0, 0, 0.25);
+  display: -webkit-flex;
+  display: -webkit-box;
+  display: -moz-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
   justify-content: center;
   background: linear-gradient(to right, #ffc9db, #FFA0C0, #ff96b9);
   border: 0;
@@ -285,7 +294,16 @@ i.new-animation {
   text-transform: uppercase;
   font-style: italic;
   margin-top: 80px;
+  display: -webkit-flex;
+  display: -webkit-box;
+  display: -moz-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
   justify-content: center;
   letter-spacing: 4px;
   font-weight: 700; }
@@ -299,24 +317,60 @@ i.new-animation {
   .last-info .date {
     font-family: 'Oswald';
     text-transform: uppercase;
+    display: -webkit-flex;
+    display: -webkit-box;
+    display: -moz-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
     justify-content: center;
     font-weight: 400;
     letter-spacing: 3px; }
   .last-info h2 {
+    display: -webkit-flex;
+    display: -webkit-box;
+    display: -moz-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
     justify-content: center;
     font-size: 2.5em;
     font-weight: 400;
     margin-top: 25px; }
   .last-info h3 {
+    display: -webkit-flex;
+    display: -webkit-box;
+    display: -moz-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
     justify-content: center;
     font-size: 1.5em;
     font-weight: 400;
     margin-top: 10px; }
   .last-info .price {
+    display: -webkit-flex;
+    display: -webkit-box;
+    display: -moz-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
     justify-content: center;
     font-weight: 300;
     margin-top: 25px;
@@ -353,7 +407,16 @@ img.head-image.right {
 p.topic {
   text-transform: uppercase;
   font-size: 3em;
+  display: -webkit-flex;
+  display: -webkit-box;
+  display: -moz-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
   justify-content: center;
   font-style: italic;
   font-weight: 700;
@@ -384,7 +447,16 @@ p.topic {
       display: flex; }
     .container-disc .disc-info .title-disc {
       color: #000;
+      display: -webkit-flex;
+      display: -webkit-box;
+      display: -moz-flex;
+      display: -moz-box;
+      display: -ms-flexbox;
       display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      -moz-justify-content: center;
       justify-content: center;
       text-align: center;
       font-weight: 400;
@@ -392,14 +464,32 @@ p.topic {
     .container-disc .disc-info .name-artist {
       color: #202020;
       font-weight: 400;
+      display: -webkit-flex;
+      display: -webkit-box;
+      display: -moz-flex;
+      display: -moz-box;
+      display: -ms-flexbox;
       display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      -moz-justify-content: center;
       justify-content: center;
       font-size: .9em; }
     .container-disc .disc-info .date-disc {
       color: #A5A5A5;
       font-family: 'Oswald';
       text-transform: uppercase;
+      display: -webkit-flex;
+      display: -webkit-box;
+      display: -moz-flex;
+      display: -moz-box;
+      display: -ms-flexbox;
       display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      -moz-justify-content: center;
       justify-content: center; }
     .container-disc .disc-info:hover {
       transform: scale(1.2); }
@@ -429,7 +519,7 @@ footer {
   margin: 0 auto; }
 
 .button-redsocial {
-  width: 40%;
+  width: 50%;
   border: 0;
   padding: 10px;
   display: inline-block;
@@ -441,10 +531,14 @@ footer {
   margin: 0 auto; }
 
 .button-redsocial.twitter {
-  background-color: #26A1EC; }
+  background-color: #26A1EC;
+  border-top-left-radius: 2px;
+  border-bottom-left-radius: 2px; }
 
 .button-redsocial.facebook {
-  background-color: #425998; }
+  background-color: #425998;
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px; }
 
 .button-company {
   width: 40%;
@@ -460,12 +554,24 @@ footer {
   margin-top: 20px; }
 
 .container-button-redsocial {
-  margin: 0 auto; }
+  margin: 0 auto;
+  width: 76%; }
 
 i.fa-twitter {
   margin-right: 10px; }
 
 i.fa-facebook {
   margin-right: 10px; }
+
+/*
+.grid:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.grid-item {
+  float: left;
+  border-radius: 5px;
+}*/
 
 /*# sourceMappingURL=styles.css.map */
