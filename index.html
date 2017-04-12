@@ -6,34 +6,37 @@
 	<meta charset="utf-8">
 	<link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,700|Oswald:300,400" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="styles/styles.css">
+	<script type="text/javascript" src="js/app.js"></script>
 </head>
-<body>
-	<header class="container">
-		<img class="logo" src="images/logo.jpg">
-		<nav class="main-menu">
-			<ul>
-				<li><a href="#">News</a></li>
-				<li><a href="#">Us</a></li>
-				<li><a href="#">Videos</a></li>
-				<li><a href="#">Music</a></li>
-				<li><a href="#">Magazine</a></li>
-			</ul>
-		</nav>
-	</header>
-	<section class="cover container">
-		<article class="group-band">
-			<span>Hey! Say! JUMP</span>
-			<span>ryosuke yamada / yuri chinen / yuto nakajima <br/>/ keito okamoto / daiki arioka / yuya takaki / kei inoo <br/>/ hikaru yaotome / kota yabu</span>
-		</article>
-		<img class="background-image-fixed" src="images/top_blur_1.jpg">
-		<img class="background-image" src="images/top.jpg">
+<body class="colorfull-bg">
+	<section class="background-container">
+		<div class="container cover-bg">
+			<header>
+				<img class="logo" src="images/logo.jpg">
+				<nav class="main-menu">
+					<ul>
+						<li><a href="#">News</a></li>
+						<li><a href="#">Us</a></li>
+						<li><a href="#">Videos</a></li>
+						<li><a href="#">Music</a></li>
+						<li><a href="#">Magazine</a></li>
+					</ul>
+				</nav>
+			</header>
+			<div class="cover">
+				<article class="group-band">
+					<span>Hey! Say! JUMP</span>
+					<span>ryosuke yamada / yuri chinen / yuto nakajima <br/>/ keito okamoto / daiki arioka / yuya takaki / kei inoo <br/>/ hikaru yaotome / kota yabu</span>
+				</article>
+			</div>
+		</div>
 	</section>
-	<section class="main-features">
+	<section class="news">
 		<div class="container-news">
 			<a class="each-new">
 				<div class="new-description">
 					<span class="date">2017.04.07</span>
-					<span class="feature">メディア情報[tv / radio / magazine]</span>
+					<span class="feature">メディア情報[magazine]</span>
 				</div>
 				<div class="icon-wrapper">
 					<i class="fa fa-certificate fa-spin fa-3x fa-fw new-animation"></i>
@@ -43,7 +46,7 @@
 			<a class="each-new">
 				<div class="new-description">
 					<span class="date">2017.11.23</span>
-					<span class="feature">メディア情報[tv / radio / magazine]</span>
+					<span class="feature">メディア情報[tv]</span>
 				</div>
 				<div class="icon-wrapper">
 					<i class="fa fa-certificate fa-spin fa-3x fa-fw new-animation"></i>
@@ -53,7 +56,7 @@
 			<a class="each-new">
 				<div class="new-description">
 					<span class="date">2017.07.19</span>
-					<span class="feature">メディア情報[magazine]</span>
+					<span class="feature">メディア情報[tv / magazine]</span>
 				</div>
 				<div class="icon-wrapper">
 					<i class="fa fa-certificate fa-spin fa-3x fa-fw new-animation"></i>
@@ -67,6 +70,8 @@
 				</button>
 			</div>
 		</div>
+	</section>
+	<section class="main-features section-padding">
 		<span class="headline">new release</span>
 		<div class="last-info">
 			<div class="container-last-info">
@@ -83,9 +88,11 @@
 			<img class="head-image left" src="images/livetour1.jpg">
 			<img class="head-image right" src="images/livetour2.jpg">
 		</div>
+	</section>
+	<section class="discography-list section-padding">
 		<p class="topic">discography</p>
-		<div class="container-disc">
-			<article class="disc-info">
+		<div class="container-disc grid">
+			<article class="disc-info grid-item">
 				<img src="images/givemelove.jpg">
 				<div class="container-music">
 					<span class="title-disc">Give Me Love</span>
@@ -93,7 +100,7 @@
 					<span class="date-disc">single - 2016.12.14</span>
 				</div>
 			</article>
-			<article class="disc-info">
+			<article class="disc-info grid-item">
 				<img src="images/fantastictime.jpg">
 				<div class="container-music">
 					<span class="title-disc">Fantastic Time</span>
@@ -101,7 +108,7 @@
 					<span class="date-disc">single - 2016.10.26</span>
 				</div>
 			</article>
-			<article class="disc-info">
+			<article class="disc-info grid-item">
 				<img src="images/dear.jpg">
 				<div class="container-music">
 					<span class="title-disc">DEAR</span>
@@ -109,7 +116,7 @@
 					<span class="date-disc">album - 2016.10.26</span>
 				</div>
 			</article>
-			<article class="disc-info">
+			<article class="disc-info grid-item">
 				<img src="images/maji.jpg">
 				<div class="container-music">
 					<span class="title-disc">Maji SUNSHINE</span>
@@ -117,7 +124,7 @@
 					<span class="date-disc">single - 2016.05.11</span>
 				</div>
 			</article>
-			<article class="disc-info">
+			<article class="disc-info grid-item">
 				<img src="images/jumping.jpg">
 				<div class="container-music">
 					<span class="title-disc">Hey! Say! JUMP LIVE<br/> TOUR 2015 JUMPing<br/> CARnival</span>
@@ -125,7 +132,7 @@
 					<span class="date-disc">video - 2016.02.10</span>
 				</div>
 			</article>
-			<article class="disc-info">
+			<article class="disc-info grid-item">
 				<img src="images/kimi.jpg">
 				<div class="container-music">
 					<span class="title-disc">Kimi Attraction</span>
@@ -133,7 +140,7 @@
 					<span class="date-disc">single - 2015.10.21</span>
 				</div>
 			</article>
-			<article class="disc-info">
+			<article class="disc-info grid-item">
 				<img src="images/jumping-car.jpg">
 				<div class="container-music">
 					<span class="title-disc">JUMPing CAR</span>
@@ -141,7 +148,7 @@
 					<span class="date-disc">album - 2015.06.24</span>
 				</div>
 			</article>
-			<article class="disc-info">
+			<article class="disc-info grid-item">
 				<img src="images/chau.jpg">
 				<div class="container-music">
 					<span class="title-disc">Chau#</span>
@@ -150,13 +157,86 @@
 				</div>
 			</article>
 		</div>
-		<button class="button disc">
-			view more
-			<i class="fa fa-long-arrow-right arrow" aria-hidden="true"></i>
-		</button>
+			<button class="button disc">
+				view more
+				<i class="fa fa-long-arrow-right arrow" aria-hidden="true"></i>
+			</button>
+	</section>
+	<section class="media">
+		<div class="card first">
+			<div class="head-card">
+				<span class="title-card">live</span>
+			</div>
+			<div class="body-card">
+				<span class="no-updated">coming soon</span>
+			</div>
+			<div class="foot-card">
+				<button class="button">
+					view more
+				</button>
+			</div>
+		</div>
+		<div class="card second">
+			<div class="head-card">
+				<span class="title-card">media</span>
+			</div>
+			<div class="body-card">
+				<span class="">tv regular</span>
+				<div class="c-media-text-box">
+					日本テレビ系「ヒルナンデス！」<br>
+					毎週火曜日 11:55 - 13:55 / 有岡大貴、八乙女 光
+				</div>
+				<div class="c-media-text-box">
+					テレビ東京系「リトルトーキョーライフ」<br>
+					毎週水曜日 24:12 - 25:00 / Hey! Say! JUMP <br>
+					★Hey! Say! JUMPとジャニーズWESTが週替わりで登場
+				</div>
+				<div class="c-media-text-box">
+					日本テレビ系「母になる」 ※4/12(水)スタート！<br>
+					毎週水曜日 22:00～ / 中島裕翔
+				</div>
+				<div class="c-media-text-box">フジテレビ系「いただきハイジャンプ」<br>
+					毎週水曜日 25:25 - 25:55 / Hey! Say! JUMP
+				</div>
+				<div class="c-media-text-box">
+					フジテレビ系「めざましテレビ」<br>毎週木曜日 5:25 - 8:00 / 伊野尾 慧
+				</div>
+				<div class="c-media-text-box">
+					日本テレビ系「メレンゲの気持ち」<br>
+					毎週土曜日 12:00 - 13:30 / 伊野尾 慧
+				</div>
+				<div class="c-media-text-box">日本テレビ系「スクール革命！」<br>
+					毎週日曜日 11:45 - 12:45 / 山田涼介、知念侑李、八乙女 光
+				</div>
+			</div>
+			<div class="foot-card">
+				<button class="button">
+					view more
+				</button>
+			</div>
+		</div>
+		<div class="color-skew">
+			<div class="background-fixed"></div>
+		</div>
 	</section>
 	<section class="members">
-		<p>MEMBER PROFILE</p>
+		<div class="team-member"><img src="images/team-1.jpg" alt="" /></div>
+		<div class="team-member"><img src="images/team-2.jpg" alt="" /></div>
+		<div class="team-member"><img src="images/team-3.jpg" alt="" /></div>
+		<div class="team-member"><img src="images/team-4.jpg" alt="" /></div>
+		<div class="team-member"><img src="images/team-5.jpg" alt="" /></div>
+		<div class="team-member"><img src="images/team-6.jpg" alt="" /></div>
+		<div class="team-member"><img src="images/team-7.jpg" alt="" /></div>
+		<div class="team-member"><img src="images/team-8.jpg" alt="" /></div>
+		<div class="team-member"><img src="images/team-9.jpg" alt="" /></div>
+		<div class="overlay"></div>
+		<div class="members-content">
+			<p>member profile</p>
+			<button class="button colorfull-bg">
+				view more
+				<i class="fa fa-long-arrow-right arrow" aria-hidden="true"></i>
+			</button>
+		</div>
 	</section>
 	<footer>
 		<div class="container-social-networking">
@@ -170,10 +250,18 @@
 					share
 				</button>
 			</div>
-			<button class="button-company">J Storn</button>
-			<a href="#"></a>
-			<p>Derechos reservados</p>
+			<button class="button-company">
+				<img src="images/jstorm.svg" alt="">
+				J Storm トップページへ
+			</button>
+			<div class="copyright">
+				<a href="#">サイトご利用にあたってのお願い</a>
+				<p>copyright(c) JStorm All Rights Reserved.</p>
+			</div>
 		</div>
 	</footer>
+	<script type="text/javascript" src="js/jquery-min.js"></script>
+	<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+	<script type="text/javascript" src="js/app.js"></script>
 </body>
 </html>
