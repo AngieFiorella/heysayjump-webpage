@@ -77,8 +77,8 @@ body {
   font-size: 16px; }
 
 .container {
-  max-width: 1200px;
-  margin: 0 auto; }
+  margin: 0 auto;
+  padding: 0 25px; }
 
 .background-image-fixed {
   position: fixed;
@@ -97,7 +97,7 @@ body {
   right: 8%; }
 
 header {
-  padding: 30px 0;
+  padding: 25px 0;
   display: -webkit-flex;
   display: -webkit-box;
   display: -moz-flex;
@@ -114,20 +114,24 @@ header {
   -webkit-align-items: flex-start;
   -moz-align-items: flex-start;
   align-items: flex-start; }
+  header i.bar {
+    display: none; }
 
 .section-padding {
   padding: 100px 30px; }
 
 .background-container {
   background-image: url("../images/top_blur_1.jpg");
+  background-repeat: no-repeat;
   background-size: 100%; }
 
 .cover-bg {
   background: url("../images/top.jpg") 50% 0% no-repeat;
-  background-size: 90%; }
+  background-size: 1135px;
+  min-height: 500px; }
 
 .logo {
-  width: 130px;
+  width: 120px;
   cursor: pointer; }
 
 .main-menu {
@@ -149,7 +153,7 @@ header {
     transform: rotateY(-360deg); }
 
 .cover {
-  min-height: 400px;
+  min-height: 200px;
   height: 63vh;
   display: -webkit-flex;
   display: -webkit-box;
@@ -164,6 +168,7 @@ header {
   align-items: flex-end; }
 
 .news {
+  margin-top: -10px;
   padding: 10px 20px 20px; }
 
 .group-band {
@@ -188,7 +193,9 @@ header {
 .main-features {
   position: relative;
   color: #FFF;
-  text-align: center; }
+  text-align: center;
+  padding: 0 30px;
+  margin-top: 90px; }
 
 .colorfull-bg {
   animation: background-color 100s infinite linear; }
@@ -400,7 +407,7 @@ i.new-animation {
   padding: 200px 50px 50px 50px;
   position: relative;
   text-align: center;
-  width: 70%; }
+  max-width: 900px; }
   .last-info .date {
     font-family: 'Oswald';
     text-transform: uppercase;
@@ -472,24 +479,25 @@ i.new-animation {
   padding: 20px; }
 
 img.head-image {
-  width: 360px;
+  width: 400px;
   position: absolute;
-  transition: all .5s;
+  transition: all .8s;
   box-shadow: 10px 17px 20px rgba(0, 0, 0, 0.25); }
   img.head-image:hover {
     box-shadow: 2px 8px 4px -6px rgba(0, 0, 0, 0.4);
-    width: 350px; }
+    width: 390px; }
 
 img.head-image.left {
-  top: -150px;
+  top: -100px;
   left: 30px; }
 
 img.head-image.right {
-  top: -150px;
+  top: -100px;
   right: 30px; }
 
 .discography-list {
-  text-align: center; }
+  text-align: center;
+  margin-bottom: 100px; }
   .discography-list p {
     text-transform: uppercase;
     font-size: 3em;
@@ -572,6 +580,7 @@ img.head-image.right {
   margin-bottom: 30px; }
 
 .members {
+  margin-top: 200px;
   height: 600px;
   display: -webkit-flex;
   display: -webkit-box;
@@ -684,11 +693,22 @@ footer {
 
 .media {
   height: 900px;
-  position: relative; }
+  position: relative;
+  margin: 0 auto;
+  display: -webkit-flex;
+  display: -webkit-box;
+  display: -moz-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+  -webkit-justify-content: space-around;
+  -moz-justify-content: space-around;
+  justify-content: space-around; }
 
 .color-skew {
   bottom: 0;
-  height: 594px;
+  height: 650px;
   left: 0;
   overflow: hidden;
   position: absolute;
@@ -722,8 +742,8 @@ i.fa-facebook {
   border-radius: 5px; }
   .card .title-card {
     text-transform: uppercase;
-    font-weight: 400;
-    font-size: 3em;
+    font-weight: 500;
+    font-size: 3.5em;
     font-style: italic;
     letter-spacing: 2px;
     margin: 10px;
@@ -760,12 +780,14 @@ i.fa-facebook {
     padding: 30px; }
 
 .card.first {
-  left: 100px;
-  transform: translateY(-60px); }
+  transform: translateY(-60px);
+  position: relative;
+  height: 670px; }
 
 .card.second {
-  right: 100px;
-  transform: translateY(60px); }
+  transform: translateY(60px);
+  position: relative;
+  height: 815px; }
 
 @media screen and (max-width: 1096px) {
   .logo {
@@ -773,20 +795,19 @@ i.fa-facebook {
 
   .cover-bg {
     background: url("../images/top.jpg") 50% 0% no-repeat;
-    background-size: 114%; }
-
-  header {
-    padding: 25px; }
+    background-size: 114%;
+    object-fit: cover;
+    min-height: 635px; }
 
   .main-menu li a {
     cursor: pointer;
     text-transform: uppercase;
-    font-size: 1em;
+    font-size: 1.2em;
     transition: all .3s; }
 
   .group-band {
     padding: 20px 25px;
-    margin-bottom: 60px; }
+    margin-bottom: 130px; }
 
   .group-band span:first-of-type {
     font-style: italic;
@@ -803,9 +824,58 @@ i.fa-facebook {
     text-transform: uppercase;
     letter-spacing: 1px; }
 
-  .last-info {
-    width: 91%; }
-    .last-info h2 {
-      font-size: 2em; } }
+  .last-info h2 {
+    font-size: 2em; }
+
+  img.head-image.left {
+    top: -100px;
+    left: 10px; }
+
+  img.head-image.right {
+    top: -100px;
+    right: 10px; } }
+@media screen and (max-width: 890px) {
+  img.head-image.left {
+    top: -100px;
+    left: -8px;
+    width: 320px; }
+
+  img.head-image.right {
+    top: -100px;
+    right: -8px;
+    width: 320px; } }
+@media screen and (max-width: 750px) {
+  .disc-info {
+    background-color: #FFF;
+    transition: all .4s;
+    width: calc( (100% - 12px * 1) / 2);
+    margin-bottom: 12px; }
+    .disc-info img {
+      width: 100%;
+      margin: 0 auto;
+      display: -webkit-flex;
+      display: -webkit-box;
+      display: -moz-flex;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: flex; }
+
+  .group-band {
+    display: none; }
+
+  .logo {
+    width: 40px; }
+
+  header {
+    padding: 10px; }
+    header i.bar {
+      display: inline-block;
+      color: #FFF;
+      float: right;
+      margin: 0;
+      font-size: 1.2em; }
+
+  .main-menu {
+    display: none; } }
 
 /*# sourceMappingURL=styles.css.map */

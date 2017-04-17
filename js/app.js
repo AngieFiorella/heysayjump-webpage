@@ -10,3 +10,10 @@ function masonry() {
 
   });
 }
+
+$('#js-menu').click(menuMobile);
+
+function menuMobile () {
+	$(this).parent().toggleClass('active');
+}
+
