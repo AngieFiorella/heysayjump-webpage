@@ -991,6 +991,25 @@ i.fa-facebook {
         color: #FFF; }
       .news .container-news .each-new .feature {
         font-size: .7em;
-        padding-bottom: 10px; } }
+        padding-bottom: 10px; }
+
+  .media {
+    height: 1900px; }
+    .media .color-skew {
+      display: none; }
+
+  .medium-container {
+    display: flex;
+    flex-direction: column; }
+    .medium-container .card {
+      width: 590px;
+      position: relative;
+      margin: 0 auto; }
+    .medium-container .card.first {
+      width: 94vh;
+      height: 100vh; }
+    .medium-container .card.second {
+      width: 94vh;
+      height: 115vh; } }
 
 /*# sourceMappingURL=styles.css.map */

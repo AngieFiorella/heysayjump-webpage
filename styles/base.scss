@@ -793,4 +793,27 @@ i.fa-facebook {
 			}
 		}
 	}
+	.media {
+		height: 1900px;
+		.color-skew {
+			display: none;
+		}
+	}
+	.medium-container {
+		display: flex;
+		flex-direction: column;
+		.card {
+			width: 590px;
+			position: relative;
+			margin: 0 auto;
+		}
+		.card.first {
+			width: 94vh;
+			height: 100vh;
+		}
+		.card.second {
+			width: 94vh;
+			height: 115vh;
+		}
+	}
 }
