@@ -15,13 +15,35 @@
 			<header>
 				<img class="logo" src="images/logo.png">
 				<nav class="main-menu">
-					<a href="javascript:void(0);" id="js-menu"><i class="fa fa-bars bar"></i></a>
-					<ul>
+					<ul class="nav-menu">
 						<li><a href="#">News</a></li>
 						<li><a href="#">Us</a></li>
 						<li><a href="#">Videos</a></li>
 						<li><a href="#">Music</a></li>
 						<li><a href="#">Magazine</a></li>
+					</ul>
+				</nav>
+				<div class="background-menu"></div>
+				<div id="js-menu" class="menu-icon">
+					<div class="menu-icon-wrapper">
+						<span></span>
+						<span></span>
+						<span></span>
+					</div>
+				</div>
+				<nav class="main-menu-mobile">
+					<ul class="nav-menu-mobile">
+						<li><a href="#"><span>TOP</span> <span>メディ</span></a></li>
+						<li><a href="#"><span>NEWS</span><span>ディア情</span> </a></li>
+						<li><a href="#"><span>DISCOGRAPHY</span><span>メデ</span> </a></li>
+						<li><a href="#"><span>LIVE</span><span>ィア情</span> </a></li>
+						<li><a href="#"><span>MEMBER PROFILE</span><span>ア情</span></a></li>
+						<li>
+							<button class="button-company">
+								<img src="images/jstorm.svg" alt="">
+								J Storm トップページへ
+							</button>
+						</li>
 					</ul>
 				</nav>
 			</header>
@@ -165,58 +187,60 @@
 			</button>
 	</section>
 	<section class="media">
-		<div class="card first">
-			<div class="head-card">
-				<span class="title-card">live</span>
-			</div>
-			<div class="body-card">
-				<span class="no-updated">coming soon</span>
-			</div>
-			<div class="foot-card">
-				<button class="button">
-					<span class="text-button">view more</span>
-					<i class="fa fa-long-arrow-right arrow" aria-hidden="true"></i>
-				</button>
-			</div>
-		</div>
-		<div class="card second">
-			<div class="head-card">
-				<span class="title-card">media</span>
-			</div>
-			<div class="body-card">
-				<span class="description-card">tv regular</span>
-				<div class="c-media-text-box">
-					日本テレビ系「ヒルナンデス！」<br>
-					毎週火曜日 11:55 - 13:55 / 有岡大貴、八乙女 光
+		<div class="medium-container">
+			<div class="card first">
+				<div class="head-card">
+					<span class="title-card">live</span>
 				</div>
-				<div class="c-media-text-box">
-					テレビ東京系「リトルトーキョーライフ」<br>
-					毎週水曜日 24:12 - 25:00 / Hey! Say! JUMP <br>
-					★Hey! Say! JUMPとジャニーズWESTが週替わりで登場
+				<div class="body-card">
+					<span class="no-updated">coming soon</span>
 				</div>
-				<div class="c-media-text-box">
-					日本テレビ系「母になる」 ※4/12(水)スタート！<br>
-					毎週水曜日 22:00～ / 中島裕翔
-				</div>
-				<div class="c-media-text-box">フジテレビ系「いただきハイジャンプ」<br>
-					毎週水曜日 25:25 - 25:55 / Hey! Say! JUMP
-				</div>
-				<div class="c-media-text-box">
-					フジテレビ系「めざましテレビ」<br>毎週木曜日 5:25 - 8:00 / 伊野尾 慧
-				</div>
-				<div class="c-media-text-box">
-					日本テレビ系「メレンゲの気持ち」<br>
-					毎週土曜日 12:00 - 13:30 / 伊野尾 慧
-				</div>
-				<div class="c-media-text-box">日本テレビ系「スクール革命！」<br>
-					毎週日曜日 11:45 - 12:45 / 山田涼介、知念侑李、八乙女 光
+				<div class="foot-card">
+					<button class="button">
+						<span class="text-button">view more</span>
+						<i class="fa fa-long-arrow-right arrow" aria-hidden="true"></i>
+					</button>
 				</div>
 			</div>
-			<div class="foot-card">
-				<button class="button">
-					<span class="text-button">view more</span>
-					<i class="fa fa-long-arrow-right arrow" aria-hidden="true"></i>
-				</button>
+			<div class="card second">
+				<div class="head-card">
+					<span class="title-card">media</span>
+				</div>
+				<div class="body-card">
+					<span class="description-card">tv regular</span>
+					<div class="c-media-text-box">
+						日本テレビ系「ヒルナンデス！」<br>
+						毎週火曜日 11:55 - 13:55 / 有岡大貴、八乙女 光
+					</div>
+					<div class="c-media-text-box">
+						テレビ東京系「リトルトーキョーライフ」<br>
+						毎週水曜日 24:12 - 25:00 / Hey! Say! JUMP <br>
+						★Hey! Say! JUMPとジャニーズWESTが週替わりで登場
+					</div>
+					<div class="c-media-text-box">
+						日本テレビ系「母になる」 ※4/12(水)スタート！<br>
+						毎週水曜日 22:00～ / 中島裕翔
+					</div>
+					<div class="c-media-text-box">フジテレビ系「いただきハイジャンプ」<br>
+						毎週水曜日 25:25 - 25:55 / Hey! Say! JUMP
+					</div>
+					<div class="c-media-text-box">
+						フジテレビ系「めざましテレビ」<br>毎週木曜日 5:25 - 8:00 / 伊野尾 慧
+					</div>
+					<div class="c-media-text-box">
+						日本テレビ系「メレンゲの気持ち」<br>
+						毎週土曜日 12:00 - 13:30 / 伊野尾 慧
+					</div>
+					<div class="c-media-text-box">日本テレビ系「スクール革命！」<br>
+						毎週日曜日 11:45 - 12:45 / 山田涼介、知念侑李、八乙女 光
+					</div>
+				</div>
+				<div class="foot-card">
+					<button class="button">
+						<span class="text-button">view more</span>
+						<i class="fa fa-long-arrow-right arrow" aria-hidden="true"></i>
+					</button>
+				</div>
 			</div>
 		</div>
 		<div class="color-skew">
