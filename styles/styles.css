@@ -251,6 +251,8 @@ header {
 .news {
   margin-top: -10px;
   padding: 10px 20px 20px; }
+  .news .group-band.secundary {
+    display: none; }
 
 .group-band {
   margin: 0;
@@ -594,6 +596,7 @@ img.head-image.right {
     padding: 20px 0;
     line-height: 26px; }
   .container-disc .disc-info {
+    border-radius: 5px;
     background-color: #FFF;
     transition: all .4s;
     width: calc( (100% - 12px * 3) / 4);
@@ -916,6 +919,16 @@ i.fa-facebook {
     right: -8px;
     width: 320px; } }
 @media screen and (max-width: 750px) {
+  .container-disc .disc-info {
+    width: calc( (100% - 12px * 1) / 2); }
+    .container-disc .disc-info:hover {
+      z-index: 99; }
+
+  .main-features .headline {
+    font-size: 2.6em;
+    font-family: 'Oswald';
+    font-weight: 500; }
+
   .disc-info {
     background-color: #FFF;
     transition: all .4s;
@@ -942,6 +955,42 @@ i.fa-facebook {
       display: block; }
 
   .view-nav-mobile .main-menu-mobile {
-    display: block; } }
+    display: block; }
+
+  .news .group-band.secundary {
+    display: block;
+    text-align: center;
+    font-size: 1em;
+    margin-top: -100px; }
+    .news .group-band.secundary span:first-of-type {
+      font-size: 2em; }
+    .news .group-band.secundary span:last-of-type {
+      font-size: .6em; }
+  .news .container-news {
+    -webkit-box-direction: normal;
+    -webkit-box-orient: vertical;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    color: #000; }
+    .news .container-news .container-button {
+      margin: 20px auto; }
+    .news .container-news .each-new {
+      border-right: none;
+      background-color: #FFF;
+      margin: 3px;
+      padding: 10px;
+      border-radius: 5px;
+      position: relative; }
+      .news .container-news .each-new .date {
+        position: absolute;
+        top: 7px;
+        left: 7px; }
+      .news .container-news .each-new .new {
+        color: #FFF; }
+      .news .container-news .each-new .feature {
+        font-size: .7em;
+        padding-bottom: 10px; } }
 
 /*# sourceMappingURL=styles.css.map */
