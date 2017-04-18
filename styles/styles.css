@@ -412,16 +412,17 @@ header {
     font-weight: 500;
     font-size: .9em; }
   .news .container-news .container-button {
-    -webkit-flex-basis: 16%;
-    -moz-flex-basis: 16%;
-    -ms-flex-preferred-size: 16%;
-    flex-basis: 16%;
     -webkit-align-self: flex-end;
     -moz-align-self: flex-end;
     -ms-flex-item-align: end;
     align-self: flex-end;
+    width: 250px;
     margin-left: 20px;
     text-align: center; }
+    .news .container-news .container-button .button {
+      width: 180px; }
+      .news .container-news .container-button .button:hover {
+        width: 200px; }
 
 @-webkit-keyframes fa-spin {
   0% {
@@ -674,6 +675,15 @@ img.head-image.right {
   display: flex;
   position: relative; }
 
+.members-up,
+.members-down {
+  display: -webkit-flex;
+  display: -webkit-box;
+  display: -moz-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex; }
+
 .team-member img {
   width: 100%;
   height: 100%;
@@ -711,13 +721,14 @@ img.head-image.right {
 
 footer {
   background-color: #000;
-  padding: 30px; }
+  padding: 30px;
+  position: relative;
+  overflow: hidden; }
 
 .container-social-networking {
   color: #FFF;
   margin: 0 auto;
-  text-align: center;
-  width: 40%; }
+  text-align: center; }
 
 .button-redsocial {
   width: 50%;
@@ -731,6 +742,17 @@ footer {
   cursor: pointer;
   margin: 0 auto; }
 
+.container-button-redsocial {
+  display: -webkit-flex;
+  display: -webkit-box;
+  display: -moz-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 500px;
+  max-width: 100%;
+  margin: 0 auto; }
+
 .button-redsocial.twitter {
   background-color: #26A1EC;
   border-top-left-radius: 2px;
@@ -740,6 +762,12 @@ footer {
   background-color: #425998;
   border-top-right-radius: 2px;
   border-bottom-right-radius: 2px; }
+
+.button-redsocial.whatsapp {
+  background-color: #3DC636;
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+  display: none; }
 
 .button-company {
   background: linear-gradient(to right, #E4C674, #BF9D44);
@@ -864,6 +892,28 @@ i.fa-facebook {
   max-width: 900px;
   position: relative;
   margin: 0 auto; }
+
+.only-mobile {
+  display: none; }
+
+.container-triangle {
+  height: 0px; }
+
+.triangle {
+  background-color: #383838;
+  cursor: pointer;
+  width: 100px;
+  height: 100px;
+  transform: skewY(-45deg);
+  position: absolute;
+  right: 0;
+  z-index: 99999999; }
+  .triangle .content-triangle {
+    transform: skewY(45deg);
+    float: right; }
+    .triangle .content-triangle .arrow-up {
+      display: block;
+      margin-bottom: 10px; }
 
 @media screen and (max-width: 1096px) {
   .logo {
@@ -1005,16 +1055,79 @@ i.fa-facebook {
 
   .medium-container {
     display: flex;
-    flex-direction: column; }
+    flex-direction: column;
+    padding: 20px; }
     .medium-container .card {
       width: 590px;
       position: relative;
       margin: 0 auto; }
     .medium-container .card.first {
-      width: 94vh;
+      width: 100%;
       height: 100vh; }
     .medium-container .card.second {
-      width: 94vh;
-      height: 115vh; } }
+      width: 100%;
+      height: 115vh; }
+
+  .button-redsocial.whatsapp {
+    display: block; }
+
+  .overlay {
+    display: none; }
+
+  .members-content {
+    -webkit-box-ordinal-group: 2;
+    -webkit-order: 1;
+    -moz-order: 1;
+    -ms-flex-order: 1;
+    order: 1;
+    position: static;
+    transform: none; }
+    .members-content button {
+      display: none; }
+
+  .only-mobile {
+    display: block; }
+
+  .members-up {
+    -webkit-box-ordinal-group: 3;
+    -webkit-order: 2;
+    -moz-order: 2;
+    -ms-flex-order: 2;
+    order: 2;
+    background-color: rgba(0, 0, 0, 0.2); }
+    .members-up .team-member:first-of-type {
+      margin-left: 10%; }
+
+  .team-member {
+    height: 150px;
+    width: 20%; }
+
+  .members-down {
+    -webkit-box-ordinal-group: 4;
+    -webkit-order: 3;
+    -moz-order: 3;
+    -ms-flex-order: 3;
+    order: 3; }
+
+  .members {
+    -webkit-box-direction: normal;
+    -webkit-box-orient: vertical;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column; }
+    .members .button.only-mobile {
+      -webkit-box-ordinal-group: 5;
+      -webkit-order: 4;
+      -moz-order: 4;
+      -ms-flex-order: 4;
+      order: 4;
+      margin-top: 30px; }
+
+  .button {
+    width: 180px; }
+    .button:hover {
+      width: 180px;
+      box-shadow: 10px 17px 20px rgba(0, 0, 0, 0.25); } }
 
 /*# sourceMappingURL=styles.css.map */
