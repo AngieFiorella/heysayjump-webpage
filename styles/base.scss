@@ -53,6 +53,7 @@ header {
 }
 
 .background-menu {
+	display: none;
 	position: fixed;
 	top: 5px;
 	right: 5px;
@@ -410,6 +411,7 @@ img.head-image.right {
 	.disc-info {
 		border-radius: 5px;
 		background-color: $white;
+		cursor: pointer;
 		transition: all .4s;
 		width: calc( (100% - 12px * 3) / 4);
 		margin-bottom: 12px;
@@ -713,6 +715,9 @@ i.fa-facebook {
 }
 
 @media screen and (max-width: 750px) {
+	.background-menu {
+		display: block;
+	}
 	.container-disc {
 		.disc-info {
 			width: calc( (100% - 12px * 1) / 2);

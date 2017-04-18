@@ -16,3 +16,4 @@ $('#js-menu').click(menuMobile);
 function menuMobile () {
 	$('header').toggleClass('view-nav-mobile');
 }
+
