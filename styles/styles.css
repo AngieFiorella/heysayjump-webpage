@@ -91,7 +91,8 @@ body {
   right: 0;
   bottom: 0;
   left: 0;
-  text-align: center; }
+  text-align: center;
+  height: auto; }
   .container-nav-mob .main-menu-mobile button {
     margin: 0 auto; }
   .container-nav-mob .main-menu-mobile ul li {
@@ -490,6 +491,34 @@ header {
     transform: scale(1) rotate(0deg); }
   50% {
     transform: scale(1.2) rotate(180deg); }
+  100% {
+    transform: scale(1) rotate(360deg); } }
+@-webkit-keyframes fa-spin {
+  0% {
+    transform: scale(1) rotate(0deg); }
+  50% {
+    transform: scale(1) rotate(180deg); }
+  100% {
+    transform: scale(1) rotate(360deg); } }
+@-moz-keyframes fa-spin {
+  0% {
+    transform: scale(1) rotate(0deg); }
+  50% {
+    transform: scale(1) rotate(180deg); }
+  100% {
+    transform: scale(1) rotate(360deg); } }
+@-ms-keyframes fa-spin {
+  0% {
+    transform: scale(1) rotate(0deg); }
+  50% {
+    transform: scale(1) rotate(180deg); }
+  100% {
+    transform: scale(1) rotate(360deg); } }
+@keyframes fa-spin {
+  0% {
+    transform: scale(1) rotate(0deg); }
+  50% {
+    transform: scale(1) rotate(180deg); }
   100% {
     transform: scale(1) rotate(360deg); } }
 .button {

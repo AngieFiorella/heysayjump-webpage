@@ -5,6 +5,7 @@ $(document).ready(function() {
 $('#js-menu').click(menuMobile);
 $('.triangle').click(smoothScroll);
 $(window).scroll(backgroundMenu);
+$('#animation').mouseover(noGain);
 var coverHeight = $('#js-cover-height').height();
 
 
@@ -37,5 +38,9 @@ function backgroundMenu() {
   } else if (scrollWindow < coverHeight) {
     $('.background-menu').removeClass('dark');
   }
+}
+
+function noGain(){
+  $('.new-animation').toggleClass('active');
 }
 
