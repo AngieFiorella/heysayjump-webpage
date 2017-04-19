@@ -8,14 +8,51 @@ body {
 	margin: 0 auto;
   padding: 0 25px;
 }
-
+.nav-menu-mobile { display: none; }
+.container-nav-mob {
+	.main-menu-mobile {
+		padding: 20px 80px;
+		margin-right: 0 auto;
+		color: $white;
+		display: none;
+		position: fixed;
+		z-index: 998;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		text-align: center;
+		button {
+			margin: 0 auto;
+		}
+		ul li {
+			border-bottom: 1px solid rgba($white, 0.2);
+			padding: 10px;
+			width: 100%;
+			&:nth-child(5),
+			&:nth-child(6) {
+				border-bottom: none;
+			}
+			span:first-of-type {
+				font-family: 'Oswald';
+				font-size: 1.2em;
+				font-style: italic;
+				display: block;
+				font-weight: 500;
+			}
+			span:last-of-type {
+				font-size: .8em;
+			}
+		}
+	}
+}
 header {
 	padding: 25px 0;
 	@include display-flex;
 	@include justify-content(space-between);
 	@include align-items(flex-start);
 	.menu-icon { display: none; }
-	.main-menu-mobile {
+	/*.main-menu-mobile {
 		padding: 20px 80px;
 		margin-right: 0 auto;
 		display: none;
@@ -49,7 +86,7 @@ header {
 				font-size: .8em;
 			}
 		}
-	}
+	}*/
 }
 
 .background-menu {
@@ -59,11 +96,11 @@ header {
 	right: 5px;
 	width: 46px;
 	height: 46px;
-	background-color: rgba($black, .8);
 	border-radius: 50%;
-	box-shadow: 5px 5px 5px 0 rgba($black, 0.4);
 	z-index: 997;
 	transition: .5s;
+		background-color: rgba($black, .8);
+		box-shadow: 5px 5px 5px 0 rgba($black, 0.4);
 }
 
 .view-nav-mobile .background-menu {
@@ -138,12 +175,15 @@ header {
 	background-image: url('../images/top_blur_1.jpg');
 	background-repeat: no-repeat;
 	background-size: 100%;
+	height: 580px;
+	position: relative;
+	overflow: hidden;
 }
 
 .cover-bg {
 	background: url('../images/top.jpg') 50% 0% no-repeat;
 	background-size: 1135px;
-	min-height: 500px;
+	height: 100%;
 }
 
 .logo {
@@ -172,8 +212,9 @@ header {
 }
 
 .cover {
-	min-height: 200px;
-	height: 63vh;
+	position: absolute;
+	bottom: 50px;
+	left: 20px;
 	@include display-flex;
 	@include align-items(flex-end);
 }
@@ -247,7 +288,7 @@ header {
 		.icon-wrapper {
 			display: inline-block;
 			position: absolute;
-			top: 0;
+			top: 5px;
 			right: 0;
 		}
 		.new-description { padding-top: 25px; }
@@ -323,14 +364,17 @@ i.arrow {
 	line-height: 26px;
 }
 i.new-animation { color: $black; }
-.headline {
-	font-size: 5em;
+
+.title {
+	font-size: 3em;
 	text-transform: uppercase;
 	font-style: italic;
 	letter-spacing: 4px;
 	font-weight: 700;
 	display: inline-block;
+	color: $white;
 }
+
 .last-info {
 	border: 7px solid $white;
 	margin: 0 auto;
@@ -488,21 +532,10 @@ img.head-image.right {
 	top: 50%;
 	transform: translate(-50%, -50%);
 	z-index: 2;
-	p {
-		text-align: center;
-		color: $white;
-		font-size: 3em;
-		font-style: italic;
-		font-weight: 600;
-		letter-spacing: 2px;
-		text-transform: uppercase;
-		margin-bottom: 60px;
-	}
+	h2 { margin-bottom: 60px; }
 	.button {
 		width: 180px;
-		&:hover {
-			width: 200px;
-		}
+		&:hover { width: 200px; }
 	}
 }
 
@@ -693,6 +726,7 @@ i.fa-facebook {
 	.content-triangle {
 		transform: skewY(45deg);
 		float: right;
+		padding: 5px;
 		.arrow-up {
 			display: block;
 			margin-bottom: 10px;
@@ -705,7 +739,6 @@ i.fa-facebook {
     width: 80px; }
 
   .cover-bg {
-    background: url("../images/top.jpg") 50% 0% no-repeat;
     background-size: 114%;
     object-fit: cover;
     min-height: 635px; }
@@ -718,22 +751,8 @@ i.fa-facebook {
 
   .group-band {
     padding: 20px 25px;
-    margin-bottom: 130px; }
-
-  .group-band span:first-of-type {
-    font-style: italic;
-    font-size: 4.3em;
-    color: $white;
-    font-weight: 700;
-    display: block;
-    margin-bottom: 20px; }
-
-  .group-band span:last-of-type {
-    font-family: 'Oswald';
-    color: $white;
-    font-weight: 100;
-    text-transform: uppercase;
-    letter-spacing: 1px; }
+    margin-bottom: 130px;
+  }
 
   .last-info h2 {
     font-size: 2em; }
@@ -763,22 +782,12 @@ i.fa-facebook {
 }
 
 @media screen and (max-width: 750px) {
-	.background-menu {
-		display: block;
-	}
+	.background-menu { display: block; }
+	.background-container { height: 100%; }
 	.container-disc {
 		.disc-info {
 			width: calc( (100% - 12px * 1) / 2);
-			&:hover {
-				z-index: 99;
-			}
-		}
-	}
-	.main-features {
-		.headline {
-			font-size: 2.6em;
-			font-family: 'Oswald';
-			font-weight: 500;
+			&:hover { z-index: 99; }
 		}
 	}
   .disc-info {
@@ -789,35 +798,43 @@ i.fa-facebook {
     .disc-info img {
       width: 100%;
       margin: 0 auto;
-      display: flex; }
-
+      @include display-flex;
+    }
+  .cover-bg {
+  	height: 70vw;
+  	min-height: auto;
+  }
+  .cover {
+		position: static;
+		padding: 50px 20px;
+  }
   .group-band {
-    display: none; }
-
-  .logo {
-    width: 40px; }
-	.nav-menu { display: none; }
-
-  header {
-    padding: 10px;
-    .menu-icon { display: block; }
+  	padding: 0;
+  	margin-bottom: 0;
+  	width: 100%;
+  	text-align: center;
+  	span:first-of-type {
+  		font-size: 2em;
+  		margin-bottom: 50px;
+  	}
+  	span:last-of-type {
+  		font-size: .7em;
+  	}
   }
 
-	.view-nav-mobile .main-menu-mobile { display: block; }
+  .logo { width: 40px; }
+	.nav-menu { display: none; }
+	.title { font-size: 2em; }
+  header {
+    padding: 10px;
+    .menu-icon {
+    	display: block; }
+  }
+
+	.container-nav-mob .main-menu-mobile { display: block; }
 
 	.news {
-		.group-band.secundary {
-			display: block;
-			text-align: center;
-			font-size: 1em;
-			margin-top: -100px;
-			span:first-of-type {
-				font-size: 2em;
-			}
-			span:last-of-type {
-				font-size: .6em;
-			}
-		}
+		padding: 0 20px;
 		.container-news {
 			@include flex-direction(column);
 			color: $black;
@@ -844,28 +861,27 @@ i.fa-facebook {
 			}
 		}
 	}
+	.main-features { margin-top: 50px; }
+	.last-info {
+		margin-top: 150px;
+		padding: 50px 20px;
+		h2 { font-size: 1.4em; }
+	}
+
 	.media {
-		height: 1600px;
-		.color-skew {
-			display: none;
-		}
+		height: auto;
+		.color-skew { display: none; }
 	}
 	.medium-container {
 		display: flex;
 		flex-direction: column;
 		padding: 20px;
 		.card {
-			width: 590px;
+			width: 100%;
 			position: relative;
 			margin: 0 auto;
-		}
-		.card.first {
-			width: 100%;
-			height: 100vh;
-		}
-		.card.second {
-			width: 100%;
-			height: 115vh;
+			transform: none;
+			margin-bottom: 50px;
 		}
 	}
 	.button-redsocial.whatsapp { display: block; }
@@ -875,6 +891,8 @@ i.fa-facebook {
 		position: static;
 		transform: none;
 		button { display: none; }
+		margin-bottom: 20px;
+		h2 { margin-bottom: 30px; }
 	}
 	.only-mobile { display: block; }
 	.members-up {
@@ -889,6 +907,8 @@ i.fa-facebook {
 	.members-down { @include order(3); }
 	.members {
 		@include flex-direction(column);
+		height: auto;
+		padding: 50px 0;
 		.button.only-mobile {
 			@include order(4);
 			margin-top: 30px;
@@ -901,4 +921,14 @@ i.fa-facebook {
 			box-shadow: 10px 17px 20px rgba(0, 0, 0, 0.25);
 		}
 	}
+	img.head-image.left {
+		width: 40vw;
+	}
+	img.head-image.right {
+		width: 40vw;
+	}
+	.triangle {
+		display: none;
+	}
+	.nav-menu-mobile { display: block; }
 }

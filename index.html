@@ -11,7 +11,7 @@
 </head>
 <body class="colorfull-bg">
 	<section class="background-container" id="first-section">
-		<div class="container cover-bg">
+		<div class="container cover-bg" id="js-cover-height">
 			<header>
 				<img class="logo" src="images/logo.png">
 				<nav class="main-menu">
@@ -31,7 +31,7 @@
 						<span></span>
 					</div>
 				</div>
-				<nav class="main-menu-mobile">
+				<!--<nav class="main-menu-mobile">
 					<ul class="nav-menu-mobile">
 						<li><a href="#"><span>TOP</span> <span>メディ</span></a></li>
 						<li><a href="#"><span>NEWS</span><span>ディア情</span> </a></li>
@@ -46,20 +46,34 @@
 						</li>
 					</ul>
 				</nav>
+				-->
 			</header>
-			<div class="cover">
-				<article class="group-band">
-					<span>Hey! Say! JUMP</span>
-					<span>ryosuke yamada / yuri chinen / yuto nakajima <br/>/ keito okamoto / daiki arioka / yuya takaki / kei inoo <br/>/ hikaru yaotome / kota yabu</span>
-				</article>
+			<div class="container-nav-mob" id="js-show-menu">
+				<nav class="main-menu-mobile">
+									<ul class="nav-menu-mobile">
+										<li><a href="#"><span>TOP</span> <span>メディ</span></a></li>
+										<li><a href="#"><span>NEWS</span><span>ディア情</span> </a></li>
+										<li><a href="#"><span>DISCOGRAPHY</span><span>メデ</span> </a></li>
+										<li><a href="#"><span>LIVE</span><span>ィア情</span> </a></li>
+										<li><a href="#"><span>MEMBER PROFILE</span><span>ア情</span></a></li>
+										<li>
+											<button class="button-company">
+												<img src="images/jstorm.svg" alt="">
+												J Storm トップページへ
+											</button>
+										</li>
+									</ul>
+								</nav>
 			</div>
+		</div>
+		<div class="cover">
+			<article class="group-band">
+				<span>Hey! Say! JUMP</span>
+				<span>ryosuke yamada / yuri chinen / yuto nakajima <br/>/ keito okamoto / daiki arioka / yuya takaki / kei inoo <br/>/ hikaru yaotome / kota yabu</span>
+			</article>
 		</div>
 	</section>
 	<section class="news colorfull-bg">
-		<article class="group-band secundary">
-			<span>Hey! Say! JUMP</span>
-			<span>ryosuke yamada / yuri chinen / yuto nakajima <br/>/ keito okamoto / daiki arioka / yuya takaki / kei inoo <br/>/ hikaru yaotome / kota yabu</span>
-		</article>
 		<div class="container-news">
 			<a class="each-new">
 				<div class="new-description">
@@ -100,7 +114,7 @@
 		</div>
 	</section>
 	<section class="main-features">
-		<span class="headline">new release</span>
+		<h2 class="headline title">new release</h2>
 		<div class="last-info">
 			<div class="container-last-info">
 				<span class="date">2017.04.26 release / video</span>
@@ -118,7 +132,7 @@
 		</div>
 	</section>
 	<section class="discography-list section-padding">
-		<p class="topic">discography</p>
+		<h2 class="topic title">discography</h2>
 		<div class="container-disc grid">
 			<article class="disc-info grid-item">
 				<img src="images/givemelove.jpg">
@@ -266,8 +280,8 @@
 			<div class="team-member"><img src="images/team-9.jpg" alt="" /></div>
 		</div>
 		<div class="overlay"></div>
-		<div class="members-content">
-			<p>member profile</p>
+		<div class="members-content container">
+			<h2 class="title">member profile</h2>
 			<button class="button colorfull-bg">
 				view more
 				<i class="fa fa-long-arrow-right arrow" aria-hidden="true"></i>
@@ -291,7 +305,7 @@
 				</button>
 				<button class="button-redsocial whatsapp">
 					<i class="fa fa-whatsapp"></i>
-					whatsapp
+					line
 				</button>
 			</div>
 			<button class="button-company">
@@ -302,7 +316,7 @@
 				<a href="#">サイトご利用にあたってのお願い</a>
 				<p>copyright(c) JStorm All Rights Reserved.</p>
 			</div>
-			<a href="#first-section">
+			<a>
 				<div class="triangle">
 					<div class="content-triangle">
 						<i class="fa fa-chevron-up arrow-up"></i>
