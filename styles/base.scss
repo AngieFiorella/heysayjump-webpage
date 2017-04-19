@@ -8,7 +8,7 @@ body {
 	margin: 0 auto;
   padding: 0 25px;
 }
-.nav-menu-mobile { display: none; }
+
 .container-nav-mob {
 	.main-menu-mobile {
 		padding: 20px 80px;
@@ -99,8 +99,8 @@ header {
 	border-radius: 50%;
 	z-index: 997;
 	transition: .5s;
-		background-color: rgba($black, .8);
-		box-shadow: 5px 5px 5px 0 rgba($black, 0.4);
+		background-color: rgba($black, 0);
+		box-shadow: 5px 5px 5px 0 rgba($black, 0);
 }
 
 .view-nav-mobile .background-menu {
@@ -782,7 +782,13 @@ i.fa-facebook {
 }
 
 @media screen and (max-width: 750px) {
-	.background-menu { display: block; }
+	.background-menu {
+		display: block;
+		&.dark {
+			background-color: rgba($black, .8);
+			box-shadow: 5px 5px 5px 0 rgba($black, 0.4);
+		}
+	}
 	.background-container { height: 100%; }
 	.container-disc {
 		.disc-info {
@@ -831,14 +837,21 @@ i.fa-facebook {
     	display: block; }
   }
 
-	.container-nav-mob .main-menu-mobile { display: block; }
-
 	.news {
 		padding: 0 20px;
 		.container-news {
 			@include flex-direction(column);
 			color: $black;
-			.container-button { margin: 20px auto; }
+			.container-button {
+				margin: 20px auto;
+				.button {
+					width: 180px;
+					&:hover {
+						width: 180px;
+						box-shadow: 10px 17px 20px rgba(0, 0, 0, 0.25);
+					}
+				}
+			}
 			.each-new {
 				border-right: none;
 				background-color: $white;
@@ -930,5 +943,17 @@ i.fa-facebook {
 	.triangle {
 		display: none;
 	}
-	.nav-menu-mobile { display: block; }
+	.main-menu-mobile.view {
+		display: block;
+	}
+	.view-nav-mobile .background-menu {
+		width: 485vw;
+		height: 485vh;
+		top: -200vw;
+		right: -200vh;
+		background-color: rgba($black, .8);
+	}
+	.nav-menu-mobile .button-company {
+		width: 250px;
+	}
 }

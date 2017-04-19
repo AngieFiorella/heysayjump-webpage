@@ -80,9 +80,6 @@ body {
   margin: 0 auto;
   padding: 0 25px; }
 
-.nav-menu-mobile {
-  display: none; }
-
 .container-nav-mob .main-menu-mobile {
   padding: 20px 80px;
   margin-right: 0 auto;
@@ -178,8 +175,8 @@ header {
   border-radius: 50%;
   z-index: 997;
   transition: .5s;
-  background-color: rgba(0, 0, 0, 0.8);
-  box-shadow: 5px 5px 5px 0 rgba(0, 0, 0, 0.4); }
+  background-color: transparent;
+  box-shadow: 5px 5px 5px 0 transparent; }
 
 .view-nav-mobile .background-menu {
   width: 400vw;
@@ -995,6 +992,9 @@ i.fa-facebook {
 @media screen and (max-width: 750px) {
   .background-menu {
     display: block; }
+    .background-menu.dark {
+      background-color: rgba(0, 0, 0, 0.8);
+      box-shadow: 5px 5px 5px 0 rgba(0, 0, 0, 0.4); }
 
   .background-container {
     height: 100%; }
@@ -1053,9 +1053,6 @@ i.fa-facebook {
     header .menu-icon {
       display: block; }
 
-  .container-nav-mob .main-menu-mobile {
-    display: block; }
-
   .news {
     padding: 0 20px; }
     .news .container-news {
@@ -1068,6 +1065,11 @@ i.fa-facebook {
       color: #000; }
       .news .container-news .container-button {
         margin: 20px auto; }
+        .news .container-news .container-button .button {
+          width: 180px; }
+          .news .container-news .container-button .button:hover {
+            width: 180px;
+            box-shadow: 10px 17px 20px rgba(0, 0, 0, 0.25); }
       .news .container-news .each-new {
         border-right: none;
         background-color: #FFF;
@@ -1186,7 +1188,17 @@ i.fa-facebook {
   .triangle {
     display: none; }
 
-  .nav-menu-mobile {
-    display: block; } }
+  .main-menu-mobile.view {
+    display: block; }
+
+  .view-nav-mobile .background-menu {
+    width: 485vw;
+    height: 485vh;
+    top: -200vw;
+    right: -200vh;
+    background-color: rgba(0, 0, 0, 0.8); }
+
+  .nav-menu-mobile .button-company {
+    width: 250px; } }
 
 /*# sourceMappingURL=styles.css.map */

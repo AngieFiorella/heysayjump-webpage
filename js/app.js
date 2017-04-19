@@ -19,6 +19,7 @@ function masonry() {
 
 function menuMobile () {
 	$('header').toggleClass('view-nav-mobile');
+  $('.main-menu-mobile').toggleClass('view');
 }
 
 function smoothScroll() {
