@@ -957,4 +957,7 @@ i.fa-facebook {
 	.nav-menu-mobile .button-company {
 		width: 250px;
 	}
+	.each-new {
+		&:hover i.fa-certificate { font-size: 1em; }
+	}
 }

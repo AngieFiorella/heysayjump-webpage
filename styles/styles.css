@@ -493,34 +493,6 @@ header {
     transform: scale(1.2) rotate(180deg); }
   100% {
     transform: scale(1) rotate(360deg); } }
-@-webkit-keyframes fa-spin {
-  0% {
-    transform: scale(1) rotate(0deg); }
-  50% {
-    transform: scale(1) rotate(180deg); }
-  100% {
-    transform: scale(1) rotate(360deg); } }
-@-moz-keyframes fa-spin {
-  0% {
-    transform: scale(1) rotate(0deg); }
-  50% {
-    transform: scale(1) rotate(180deg); }
-  100% {
-    transform: scale(1) rotate(360deg); } }
-@-ms-keyframes fa-spin {
-  0% {
-    transform: scale(1) rotate(0deg); }
-  50% {
-    transform: scale(1) rotate(180deg); }
-  100% {
-    transform: scale(1) rotate(360deg); } }
-@keyframes fa-spin {
-  0% {
-    transform: scale(1) rotate(0deg); }
-  50% {
-    transform: scale(1) rotate(180deg); }
-  100% {
-    transform: scale(1) rotate(360deg); } }
 .button {
   background: linear-gradient(to right, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.15), rgba(0, 0, 0, 0.05));
   border-radius: 25px;
@@ -1228,6 +1200,9 @@ i.fa-facebook {
     background-color: rgba(0, 0, 0, 0.8); }
 
   .nav-menu-mobile .button-company {
-    width: 250px; } }
+    width: 250px; }
+
+  .each-new:hover i.fa-certificate {
+    font-size: 1em; } }
 
 /*# sourceMappingURL=styles.css.map */
