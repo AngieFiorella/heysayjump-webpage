@@ -5,7 +5,6 @@ $(document).ready(function() {
 $('#js-menu').click(menuMobile);
 $('.triangle').click(smoothScroll);
 $(window).scroll(backgroundMenu);
-$('#animation').mouseover(noGain);
 var coverHeight = $('#js-cover-height').height();
 
 
@@ -18,7 +17,7 @@ function masonry() {
   });
 }
 
-function menuMobile () {
+function menuMobile() {
 	$('header').toggleClass('view-nav-mobile');
   $('.main-menu-mobile').toggleClass('view');
 }
@@ -31,7 +30,6 @@ function smoothScroll() {
 
 function backgroundMenu() {
   var scrollWindow = $(window).scrollTop();
-  console.log(scrollWindow);
 
   if (scrollWindow >= coverHeight) {
     $('.background-menu').addClass('dark');
@@ -39,8 +37,3 @@ function backgroundMenu() {
     $('.background-menu').removeClass('dark');
   }
 }
-
-function noGain(){
-  $('.new-animation').toggleClass('active');
-}
-

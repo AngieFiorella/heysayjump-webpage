@@ -81,8 +81,8 @@ body {
   padding: 0 25px; }
 
 .container-nav-mob .main-menu-mobile {
-  padding: 20px 80px;
-  margin-right: 0 auto;
+  padding: 20px;
+  margin: 0 auto;
   color: #FFF;
   display: none;
   position: fixed;
@@ -94,7 +94,9 @@ body {
   text-align: center;
   height: auto; }
   .container-nav-mob .main-menu-mobile button {
-    margin: 0 auto; }
+    margin: 0 auto;
+    width: 250px;
+    max-width: 100%; }
   .container-nav-mob .main-menu-mobile ul li {
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     padding: 10px;
@@ -127,42 +129,7 @@ header {
   -ms-flex-align: start;
   -webkit-align-items: flex-start;
   -moz-align-items: flex-start;
-  align-items: flex-start;
-  /*.main-menu-mobile {
-  	padding: 20px 80px;
-  	margin-right: 0 auto;
-  	display: none;
-  	color: $white;
-  	position: fixed;
-  	z-index: 998;
-  	top: 0;
-  	right: 0;
-  	bottom: 0;
-  	left: 0;
-  	text-align: center;
-  	button {
-  		margin: 0 auto;
-  	}
-  	ul li {
-  		border-bottom: 1px solid rgba($white, 0.2);
-  		padding: 10px;
-  		width: 100%;
-  		&:nth-child(5),
-  		&:nth-child(6) {
-  			border-bottom: none;
-  		}
-  		span:first-of-type {
-  			font-family: 'Oswald';
-  			font-size: 1.2em;
-  			font-style: italic;
-  			display: block;
-  			font-weight: 500;
-  		}
-  		span:last-of-type {
-  			font-size: .8em;
-  		}
-  	}
-  }*/ }
+  align-items: flex-start; }
   header .menu-icon {
     display: none; }
 
@@ -180,14 +147,14 @@ header {
   box-shadow: 5px 5px 5px 0 transparent; }
 
 .view-nav-mobile .background-menu {
-  width: 400vw;
+  width: 400vh;
   height: 400vh;
-  top: -200vw;
-  right: -200vh; }
+  top: -100vw;
+  right: -100vh;
+  background-color: rgba(0, 0, 0, 0.8); }
 
 .menu-icon {
   cursor: pointer;
-  height: 15px;
   position: fixed;
   transform: rotate(0deg);
   transition: .5s ease-in-out;
@@ -863,10 +830,9 @@ footer {
   margin-top: -100px;
   transform: skewY(8deg); }
 
-i.fa-twitter {
-  margin-right: 10px; }
-
-i.fa-facebook {
+i.fa-twitter,
+i.fa-facebook,
+i.fa-whatsapp {
   margin-right: 10px; }
 
 .card {
@@ -1051,7 +1017,7 @@ i.fa-facebook {
     font-size: 2em; }
 
   header {
-    padding: 10px; }
+    padding: 20px 10px; }
     header .menu-icon {
       display: block; }
 
@@ -1175,9 +1141,7 @@ i.fa-facebook {
       width: 180px;
       box-shadow: 10px 17px 20px rgba(0, 0, 0, 0.25); }
 
-  img.head-image.left {
-    width: 40vw; }
-
+  img.head-image.left,
   img.head-image.right {
     width: 40vw; }
 
@@ -1185,14 +1149,8 @@ i.fa-facebook {
     display: none; }
 
   .main-menu-mobile.view {
-    display: block; }
-
-  .view-nav-mobile .background-menu {
-    width: 485vw;
-    height: 485vh;
-    top: -200vw;
-    right: -200vh;
-    background-color: rgba(0, 0, 0, 0.8); }
+    display: block;
+    overflow-y: auto; }
 
   .nav-menu-mobile .button-company {
     width: 250px; }
