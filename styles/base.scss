@@ -278,6 +278,7 @@ header {
 	display: flex;
 	font-size: 1.1em;
 	color: $white;
+	margin-top: 10px;
 	.each-new {
 		cursor: pointer;
 		flex-basis: 28%;
@@ -876,11 +877,6 @@ i.fa-facebook {
 		}
 	}
 	.main-features { margin-top: 50px; }
-	.last-info {
-		margin-top: 150px;
-		padding: 50px 20px;
-		h2 { font-size: 1.4em; }
-	}
 
 	.media {
 		height: auto;
@@ -957,7 +953,22 @@ i.fa-facebook {
 	.nav-menu-mobile .button-company {
 		width: 250px;
 	}
-	.each-new {
-		&:hover i.fa-certificate { font-size: 1em; }
+	.news .container-news {
+		.each-new {
+			&:hover i.fa-certificate { font-size: 2.5em; }
+		}
+	}
+	.last-info {
+		margin-top: 150px;
+		padding: 170px 20px;
+		h2 { font-size: 1.4em; }
+	}
+}
+
+@media screen and (max-width: 484px) {
+	.last-info {
+		margin-top: 150px;
+		padding: 50px 20px;
+		h2 { font-size: 1.4em; }
 	}
 }
