@@ -30,7 +30,6 @@ function smoothScroll() {
 
 function backgroundMenu() {
   var scrollWindow = $(window).scrollTop();
-
   if (scrollWindow >= coverHeight) {
     $('.background-menu').addClass('dark');
   } else if (scrollWindow < coverHeight) {
