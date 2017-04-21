@@ -151,7 +151,7 @@ header {
   height: 400vh;
   top: -100vw;
   right: -100vh;
-  background-color: rgba(0, 0, 0, 0.8); }
+  background-color: rgba(0, 0, 0, 0.9); }
 
 .menu-icon {
   cursor: pointer;
@@ -601,8 +601,8 @@ img.head-image.right {
     letter-spacing: 3px; }
 
 .container-disc {
-  max-width: 940px;
-  width: 100%;
+  width: 940px;
+  max-width: 100%;
   margin: 50px auto; }
   .container-disc .container-music {
     padding: 20px 0;
@@ -961,7 +961,7 @@ i.fa-whatsapp {
   .background-menu {
     display: block; }
     .background-menu.dark {
-      background-color: rgba(0, 0, 0, 0.8);
+      background-color: rgba(0, 0, 0, 0.9);
       box-shadow: 5px 5px 5px 0 rgba(0, 0, 0, 0.4); }
 
   .background-container {
@@ -970,7 +970,7 @@ i.fa-whatsapp {
   .container-disc .disc-info {
     width: calc( (100% - 12px * 1) / 2); }
     .container-disc .disc-info:hover {
-      z-index: 99; }
+      z-index: 2; }
 
   .disc-info {
     background-color: #FFF;

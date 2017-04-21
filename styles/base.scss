@@ -67,8 +67,8 @@ header {
 	border-radius: 50%;
 	z-index: 997;
 	transition: .5s;
-	background-color: rgba($black, 0);
-	box-shadow: 5px 5px 5px 0 rgba($black, 0);
+	background-color: transparent;
+	box-shadow: 5px 5px 5px 0 transparent;
 }
 
 .view-nav-mobile .background-menu {
@@ -76,7 +76,7 @@ header {
 	height: 400vh;
 	top: -100vw;
 	right: -100vh;
-	background-color: rgba($black, .8);
+	background-color: rgba($black, .9);
 }
 
 .menu-icon {
@@ -420,8 +420,8 @@ img.head-image.right {
 	}
 }
 .container-disc {
-	max-width: 940px;
-	width: 100%;
+	width: 940px;
+	max-width: 100%;
 	margin: 50px auto;
 	.container-music {
 		padding: 20px 0;
@@ -755,7 +755,7 @@ i.fa-whatsapp {
 	.background-menu {
 		display: block;
 		&.dark {
-			background-color: rgba($black, .8);
+			background-color: rgba($black, .9);
 			box-shadow: 5px 5px 5px 0 rgba($black, 0.4);
 		}
 	}
@@ -763,7 +763,7 @@ i.fa-whatsapp {
 	.container-disc {
 		.disc-info {
 			width: calc( (100% - 12px * 1) / 2);
-			&:hover { z-index: 99; }
+			&:hover { z-index: 2; }
 		}
 	}
   .disc-info {
